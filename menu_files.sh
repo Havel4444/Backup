@@ -17,14 +17,24 @@ function f_commit() {
 	path="$(dirname "$0")"
 	cd $path
 	a_commit=$1
+
 	git add .
-	git commit -m "$a_commit"
+	git commit -m "${a_commit}"
 	git push -u origin main
 }
 function f_remove() {
 	path="$(dirname "$0")"
 	cd $path
 	rm B* && ls
+}
+function f_automatic() {
+	path="$(dirname "$0")"
+	cd $path
+	fecha="$(date +'%D %T')"
+
+	git add .
+	git commit -m "Automatico: ${fecha}"
+	git push -u origin main
 }
 
 function f_help_panel() {
@@ -37,13 +47,14 @@ function f_help_panel() {
 }
 
 declare -i commit=0
+declare -i automatic=0
 declare -i execut=0
 declare -i remove=0
 
-while getopts "c:reh" arg; do
+while getopts "c:reha" arg; do
 	case $arg in
 	c)
-		a_commit=$OPTARG
+		a_commit="$OPTARG"
 		let commit+=1
 		;;
 	e)
@@ -52,12 +63,17 @@ while getopts "c:reh" arg; do
 	r)
 		let remove+=1
 		;;
+	a)
+		let automatic+=1
+		;;
 	h) ;;
 	esac
 done
 
 if [ "$commit" -eq 1 ]; then
-	f_commit $a_commit
+	f_commit "$a_commit"
+elif [ "$automatic" -eq 1 ]; then
+	f_automatic
 elif [ "$execut" -eq 1 ]; then
 	f_execut
 elif [ "$remove" -eq 1 ]; then
