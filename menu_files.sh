@@ -25,7 +25,7 @@ function f_commit() {
 function f_remove() {
 	path="$(dirname "$0")"
 	cd $path
-	rm B* && ls
+	rm -r B* && ls
 }
 function f_automatic() {
 	path="$(dirname "$0")"

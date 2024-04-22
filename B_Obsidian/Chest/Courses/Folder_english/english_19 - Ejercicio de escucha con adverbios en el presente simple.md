@@ -1,0 +1,17 @@
+
+[[index]]
+[[index_english]]
+
+
+# ARCHIVE
+![[LECCIÓN 19 - EJERCICIO DE ESCUCHA CON ADVERBIOS Y EL PRESENTE SIMPLE.xlsx]]
+
+
+### ANNOTATIONS
+
+
+### EXAMPLE
+
+
+### CONCLUSION
+

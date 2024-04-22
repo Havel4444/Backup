@@ -1,0 +1,12 @@
+{
+  "autoConvertHtml": true,
+  "vimMode": true,
+  "focusNewTab": true,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "autoPairBrackets": true,
+  "spellcheck": false,
+  "alwaysUpdateLinks": true
+}

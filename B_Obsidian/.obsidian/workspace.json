@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "5227445d46bc75c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "f2728518db09487e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dcde97bde7acb00b",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chest/Courses/Folder_linux/index_linux.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "4fbdd4a3f28be627",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chest/Courses/Folder_linux/funciones.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "dfc4b87eabb114f5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chest/Courses/Folder_linux/bash.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f4fe78f3f163e62f",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e70b22e4f9e4553",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e77c8b7dc13f81b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "07d445fc82c7fc3b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "#Git",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "169d6db568c7868a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "31a5cc805cbb3886",
+    "type": "split",
+    "children": [
+      {
+        "id": "c7a1edc56e57f967",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e738fa844e76c077",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Chest/Courses/Folder_linux/bash.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cfc4222edc284da4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Chest/Courses/Folder_linux/bash.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "01d5a051b8f9769e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "fce0e7deada3b425",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Chest/Courses/Folder_linux/bash.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "dfc4b87eabb114f5",
+  "lastOpenFiles": [
+    "Chest/Courses/Folder_linux/index_linux.md",
+    "Chest/Courses/Folder_linux/bash.md",
+    "123~",
+    "123",
+    "asd",
+    "123asldkfja",
+    "Chest/Courses/Folder_linux/S4vitar script de busqueda.md",
+    "Chest/Courses/Folder_linux/funciones.md",
+    "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
+    "Chest/Courses/Folder_python/variables y tipos de datos.md",
+    "Chest/Courses/Folder_python",
+    "Chest/Courses/Folder_python/index_python.md",
+    "Chest/Courses/index.md",
+    "Chest/Courses/Folder_python/shebang y convenios.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 7 permisos especiales.md",
+    "Chest/Courses/Folder_linux/S4vitar coleccion find and grep.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 2 introduccion a linux 2.md",
+    "Chest/Courses/Folder_sheets/index_sheets.md",
+    "Chest/Courses/Folder_linux/S4vitar conexion ssh.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 10 script en bash.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 8 directorios.md",
+    "Chest/Courses/Folder_linux/Fundamentos de linux comandos.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 6 asignacion y creacion de permisos.md",
+    "Chest/Courses/Folder_linux/Fundamentos de linux 2 sistema.md",
+    "Chest/Courses/Folder_linux/index_git.md",
+    "Chest/Courses/Folder_linux/Configuracion .dotfiles.md",
+    "Chest/Courses/Folder_linux/Fundamentos de la red 1.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 5 lectura e interpretacin de permisos.md",
+    "Untitled.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 0 descompresor recursivo automático de archivos en Bash.md",
+    "S4vitar clase 8 asignacion de permisos 1",
+    "DEMO"
+  ]
+}
