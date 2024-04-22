@@ -1,4 +1,4 @@
-" Habilitar resaltado de sintaxis
+" Habilitar resaltado de sintaxiss
 syntax on
 
 " Establecer el tamaño de la tabulación

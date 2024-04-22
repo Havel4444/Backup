@@ -30,8 +30,10 @@ function f_remove() {
 function f_automatic() {
 	path="$(dirname "$0")"
 	cd $path
-	fecha="$(date +'%D %T')"
 
+	bash /home/havel/Backup/files.sh
+
+	fecha="$(date +'%D %T')"
 	git add .
 	git commit -m "Automatico: ${fecha}"
 	git push -u origin main

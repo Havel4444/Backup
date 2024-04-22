@@ -134,7 +134,7 @@ alias dogi="~/.dotfiles/./sgit.sh"
 # Kitty opacity
 alias kiop="~/Desktop/code/./opacity.sh"
 # Backup
-#alias bu="bash /home/havel/Backup/menu_files.sh"
+alias bu="bash /home/havel/Backup/menu_files.sh"
 
 # Prueba
 function ippr() {
@@ -165,9 +165,9 @@ cphi() {
 	tac .function_history | fzf --no-sort | xclip -selection clipboard
 }
 # BackUp
-function bu() {
-	bash /home/havel/Backup/menu_files.sh $1 $2
-}
+#function bu() {
+#	bash /home/havel/Backup/menu_files.sh "$1" "$2"
+#}
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
