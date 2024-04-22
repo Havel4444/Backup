@@ -5,6 +5,11 @@
 ##### MD5SUM
 - Directorios:
 ```bash
-tar -cf - /home/havel/Documentos/Cofre/Obsidian | md5sum
+# Version 1
+md5deep -r directory/
+# Version 2
+md5deep -r directory/ | awk '{print $1}' | sort
 ```
-asldkfj
+
+asd
+
