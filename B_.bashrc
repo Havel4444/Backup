@@ -160,14 +160,16 @@ function tr() {
 	echo $data1 | cpou
 }
 # Copiar historial
-cphi() {
+function cphi() {
 	cat ~/.bash_history >.function_history
 	tac .function_history | fzf --no-sort | xclip -selection clipboard
 }
-# BackUp
-#function bu() {
-#	bash /home/havel/Backup/menu_files.sh "$1" "$2"
-#}
+# Copilador c++ y editor
+function co() {
+	file=$1
+	g++ "$file.cpp" -o "$file"
+	./"$file"
+}
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

@@ -8,13 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "dcde97bde7acb00b",
+            "id": "e9901dd3d205be3c",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chest/Courses/Folder_linux/index_linux.md",
+                "file": "Chest/Courses/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -22,43 +22,19 @@
             }
           },
           {
-            "id": "4fbdd4a3f28be627",
+            "id": "429a28875849f419",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chest/Courses/Folder_linux/funciones.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dfc4b87eabb114f5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chest/Courses/Folder_linux/bash.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0cac2fc3852a5973",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chest/Courses/Folder_linux/bash.md",
+                "file": "Chest/Courses/Folder_python/variables y tipos de datos.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -124,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chest/Courses/Folder_linux/bash.md",
+                "file": "Chest/Courses/Folder_python/variables y tipos de datos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chest/Courses/Folder_linux/bash.md",
+                "file": "Chest/Courses/Folder_python/variables y tipos de datos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chest/Courses/Folder_linux/bash.md"
+                "file": "Chest/Courses/Folder_python/variables y tipos de datos.md"
               }
             }
           }
@@ -185,21 +161,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0cac2fc3852a5973",
+  "active": "429a28875849f419",
   "lastOpenFiles": [
+    "Chest/Courses/Folder_python/index_python.md",
+    "Chest/Courses/index.md",
     "Chest/Courses/Folder_linux/index_linux.md",
+    "Chest/Courses/Folder_linux/Fundamentos de linux comandos.md",
+    "Chest/Courses/Folder_python/variables y tipos de datos.md",
+    "Chest/Courses/Folder_linux/funciones.md",
     "Chest/Courses/Folder_linux/bash.md",
     "123~",
     "123",
     "asd",
     "123asldkfja",
     "Chest/Courses/Folder_linux/S4vitar script de busqueda.md",
-    "Chest/Courses/Folder_linux/funciones.md",
     "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
-    "Chest/Courses/Folder_python/variables y tipos de datos.md",
     "Chest/Courses/Folder_python",
-    "Chest/Courses/Folder_python/index_python.md",
-    "Chest/Courses/index.md",
     "Chest/Courses/Folder_python/shebang y convenios.md",
     "Chest/Courses/Folder_linux/S4vitar clase 7 permisos especiales.md",
     "Chest/Courses/Folder_linux/S4vitar coleccion find and grep.md",
@@ -208,7 +185,6 @@
     "Chest/Courses/Folder_linux/S4vitar conexion ssh.md",
     "Chest/Courses/Folder_linux/S4vitar clase 10 script en bash.md",
     "Chest/Courses/Folder_linux/S4vitar clase 8 directorios.md",
-    "Chest/Courses/Folder_linux/Fundamentos de linux comandos.md",
     "Chest/Courses/Folder_linux/S4vitar clase 6 asignacion y creacion de permisos.md",
     "Chest/Courses/Folder_linux/Fundamentos de linux 2 sistema.md",
     "Chest/Courses/Folder_linux/index_git.md",
