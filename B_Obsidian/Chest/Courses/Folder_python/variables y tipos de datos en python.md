@@ -90,26 +90,3 @@ print(f"Promedio: {sum(mi_lista) / len(mi_lista)}")
 # Promedio redondeado con solo 2 digitos de una lista.
 print(f"Promedio redondeado de 7: {round( 22 / 7, 2)}")
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

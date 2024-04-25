@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chest/Courses/Folder_python/variables y tipos de datos.md",
+                "file": "Chest/Courses/Folder_python/operadores basicos.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chest/Courses/Folder_python/variables y tipos de datos.md",
+                "file": "Chest/Courses/Folder_python/operadores basicos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chest/Courses/Folder_python/variables y tipos de datos.md",
+                "file": "Chest/Courses/Folder_python/operadores basicos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chest/Courses/Folder_python/variables y tipos de datos.md"
+                "file": "Chest/Courses/Folder_python/operadores basicos.md"
               }
             }
           }
@@ -163,11 +163,15 @@
   },
   "active": "429a28875849f419",
   "lastOpenFiles": [
+    "Chest/Courses/Folder_c++",
     "Chest/Courses/Folder_python/index_python.md",
+    "Chest/Courses/Folder_python/operadores basicos.md",
+    "Chest/Courses/Folder_python/variables y tipos de datos en python.md",
     "Chest/Courses/index.md",
+    "Chest/Courses/Folder_c++/index_c++.md",
+    "Chest/Courses/Folder_c++/variables y tipos de datos en c++.md",
     "Chest/Courses/Folder_linux/index_linux.md",
     "Chest/Courses/Folder_linux/Fundamentos de linux comandos.md",
-    "Chest/Courses/Folder_python/variables y tipos de datos.md",
     "Chest/Courses/Folder_linux/funciones.md",
     "Chest/Courses/Folder_linux/bash.md",
     "123~",
@@ -190,9 +194,6 @@
     "Chest/Courses/Folder_linux/index_git.md",
     "Chest/Courses/Folder_linux/Configuracion .dotfiles.md",
     "Chest/Courses/Folder_linux/Fundamentos de la red 1.md",
-    "Chest/Courses/Folder_linux/S4vitar clase 5 lectura e interpretacin de permisos.md",
-    "Untitled.md",
-    "Chest/Courses/Folder_linux/S4vitar clase 0 descompresor recursivo automático de archivos en Bash.md",
     "S4vitar clase 8 asignacion de permisos 1",
     "DEMO"
   ]

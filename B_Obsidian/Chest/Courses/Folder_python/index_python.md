@@ -2,8 +2,8 @@
 
 ## CONCEPTOS BACICOS
 - 1- [[shebang y convenios]]
-- 2- [[variables y tipos de datos]]
-- 3- 
+- 2- [[variables y tipos de datos en python]]
+- 3- [[operadores basicos]]
 - 4- 
 - 5- 
 - 6- 
