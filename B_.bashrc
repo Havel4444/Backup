@@ -170,6 +170,14 @@ function co() {
 	g++ "$file.cpp" -o "$file"
 	./"$file"
 }
+# Ejecutar partes de archivos python3 con funciones "def".
+function pyde() {
+	file="$1"
+	number=$2
+	echo "p$number()" >>"$file"
+	python3 "$file"
+	sed -i '$d' "$file"
+}
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

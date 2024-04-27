@@ -6,7 +6,7 @@
 - 3- [[operadores basicos]]
 - 4- 
 - 5- 
-- 6- 
+- 6- [[control de flujo]] 
 
 
 
