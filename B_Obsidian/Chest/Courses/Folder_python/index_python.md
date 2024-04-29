@@ -7,7 +7,7 @@
 - 4- 
 - 5- 
 - 6- [[control de flujo]] 
-
+- 7- [[funciones y ambito de variable]]
 
 
 

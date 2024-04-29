@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chest/Courses/Folder_python/control de flujo.md",
+                "file": "funciones y ambito de variable.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chest/Courses/Folder_python/control de flujo.md",
+                "file": "funciones y ambito de variable.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chest/Courses/Folder_python/control de flujo.md",
+                "file": "funciones y ambito de variable.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chest/Courses/Folder_python/control de flujo.md"
+                "file": "funciones y ambito de variable.md"
               }
             }
           }
@@ -161,14 +161,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4e77c8b7dc13f81b",
+  "active": "429a28875849f419",
   "lastOpenFiles": [
     "Chest/Courses/Folder_python/index_python.md",
+    "funciones y ambito de variable.md",
     "Chest/Courses/Folder_python/control de flujo.md",
+    "Chest/Courses/index.md",
     "Chest/Courses/Folder_python/operadores basicos.md",
     "Chest/Courses/Folder_c++",
     "Chest/Courses/Folder_python/variables y tipos de datos en python.md",
-    "Chest/Courses/index.md",
     "Chest/Courses/Folder_c++/index_c++.md",
     "Chest/Courses/Folder_c++/variables y tipos de datos en c++.md",
     "Chest/Courses/Folder_linux/index_linux.md",
@@ -194,7 +195,6 @@
     "Chest/Courses/Folder_linux/Fundamentos de linux 2 sistema.md",
     "Chest/Courses/Folder_linux/index_git.md",
     "Chest/Courses/Folder_linux/Configuracion .dotfiles.md",
-    "Chest/Courses/Folder_linux/Fundamentos de la red 1.md",
     "S4vitar clase 8 asignacion de permisos 1",
     "DEMO"
   ]

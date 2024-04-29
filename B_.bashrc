@@ -178,6 +178,14 @@ function pyde() {
 	python3 "$file"
 	sed -i '$d' "$file"
 }
+# Mostrar la sintax de una funcion.
+function pysi() {
+	file="$1"
+	number=$2
+	echo "from inspect import getsource; print(getsource("p$number"))" >>"$file"
+	python3 "$file"
+	sed -i '$d' "$file"
+}
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
