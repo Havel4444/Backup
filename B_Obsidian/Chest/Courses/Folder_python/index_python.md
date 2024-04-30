@@ -8,7 +8,7 @@
 - 5- 
 - 6- [[control de flujo]] 
 - 7- [[funciones y ambito de variable]]
-
+- 8- [[funciones lambda anonimos]]
 
 
 

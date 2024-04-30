@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "funciones y ambito de variable.md",
+                "file": "Chest/Courses/Folder_python/variables y tipos de datos en python.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "funciones y ambito de variable.md",
+                "file": "Chest/Courses/Folder_python/variables y tipos de datos en python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "funciones y ambito de variable.md",
+                "file": "Chest/Courses/Folder_python/variables y tipos de datos en python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "funciones y ambito de variable.md"
+                "file": "Chest/Courses/Folder_python/variables y tipos de datos en python.md"
               }
             }
           }
@@ -164,6 +164,8 @@
   "active": "429a28875849f419",
   "lastOpenFiles": [
     "Chest/Courses/Folder_python/index_python.md",
+    "Chest/Courses/Folder_python/shebang y convenios.md",
+    "funciones lambda anonimos.md",
     "funciones y ambito de variable.md",
     "Chest/Courses/Folder_python/control de flujo.md",
     "Chest/Courses/index.md",
@@ -183,7 +185,6 @@
     "Chest/Courses/Folder_linux/S4vitar script de busqueda.md",
     "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
     "Chest/Courses/Folder_python",
-    "Chest/Courses/Folder_python/shebang y convenios.md",
     "Chest/Courses/Folder_linux/S4vitar clase 7 permisos especiales.md",
     "Chest/Courses/Folder_linux/S4vitar coleccion find and grep.md",
     "Chest/Courses/Folder_linux/S4vitar clase 2 introduccion a linux 2.md",
@@ -194,7 +195,6 @@
     "Chest/Courses/Folder_linux/S4vitar clase 6 asignacion y creacion de permisos.md",
     "Chest/Courses/Folder_linux/Fundamentos de linux 2 sistema.md",
     "Chest/Courses/Folder_linux/index_git.md",
-    "Chest/Courses/Folder_linux/Configuracion .dotfiles.md",
     "S4vitar clase 8 asignacion de permisos 1",
     "DEMO"
   ]

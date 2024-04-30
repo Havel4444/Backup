@@ -174,7 +174,8 @@ function co() {
 function pyde() {
 	file="$1"
 	number=$2
-	echo "p$number()" >>"$file"
+	argument="$3"
+	echo "p$number("$argument")" >>"$file"
 	python3 "$file"
 	sed -i '$d' "$file"
 }
