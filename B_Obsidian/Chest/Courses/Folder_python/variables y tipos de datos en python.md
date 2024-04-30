@@ -55,12 +55,16 @@ mi_lista.append(4)
 mi_lista += [7, 8, 9]
 
 # Ordenar la lista.
-mi_lista = sorted(mi_lista)
+sorted(mi_lista)
+mi_lista.sort()
 
 # Eliminar el elemento de una lista con el indice 0.
 del mi_lista[0]
 # Eliminar el ultimo elemento.
 mi_lista.pop()
+# Eliminar un elemento de una lista segun su valor.
+mi_lista.remove(9)
+
 
 # Inserta en un indice el elemento de una lista
 mi_lista.insert(9, 999999)
