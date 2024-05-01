@@ -92,6 +92,7 @@ fi
 #alias l='ls -CF'
 
 # alias.
+alias p3="python3"
 alias menu="/home/havel/Data/Scripts/./menu.sh"
 alias nodu="awk '!x[\$0]++'"
 alias sp="trans -b :es"
@@ -119,6 +120,10 @@ alias di='redshift -O 3200'
 alias ta='redshift -O 2500'
 alias no='redshift -O 2200'
 alias re='redshift -x'
+
+# Temp
+#alias temp="cd '$(mktemp -d)' && touch borrador.py && nvim borrador.py && echo '#!/usr/bin/env python3' >> borrador.py"
+#alias temb="cd '$(mktemp -d)' && touch borrador.sh && nvim borrador.sh && echo '#!/bin/bash' >> borrador.sh"
 
 # PulseAudio
 alias puon='pactl load-module module-simple-protocol-tcp rate=44100 format=s16le channels=2 source=auto.slave.monitor record=true port=8000'
@@ -186,6 +191,21 @@ function pysi() {
 	echo "from inspect import getsource; print(getsource("p$number"))" >>"$file"
 	python3 "$file"
 	sed -i '$d' "$file"
+}
+# Temp
+function temp() {
+	cd "$(mktemp -d)"
+	punto=$(pwd)              # En bash es necesario usar $() en un comando para asignar el resultado a una variable, dentro de una cadena tambien selo utiliza.
+	touch "${punto}/borrador" # En bash se usan llaves {} para delimitar la variables en una cadena de texto.
+	echo "#!/usr/bin/env python3" >"${punto}/borrador"
+	nvim "${punto}/borrador"
+}
+function temb() {
+	cd "$(mktemp -d)"
+	punto=$(pwd)              # En bash es necesario usar $() en un comando para asignar el resultado a una variable, dentro de una cadena tambien selo utiliza.
+	touch "${punto}/borrador" # En bash se usan llaves {} para delimitar la variables en una cadena de texto.
+	echo "#!/bin/bash" >"${punto}/borrador"
+	nvim "${punto}/borrador"
 }
 
 # Alias definitions.

@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+## FUNCIONES LAMBDA ANONIMOS: 
+
+## 1.Funcion lambda: 1 parametro elevado a al cuadrado.
+def p1():
+    cuadrado = lambda x: x**2
+    print(cuadrado(4))
+
+## 2.Funcion lambda: Suma de 2 parametros.
+def p2():
+    cuadrado = lambda x, y: x + y
+    print(cuadrado(2, 2))
+
+## 3.Funcion lambda: Iterar en una lista de numeros para sacar el cuadrado usando map y list.
+def p3():
+    numbers = [1, 2, 3, 4]
+    cuadrados = list(map(lambda x: x**2, numbers))
+    print(cuadrados)
+
+## 4(m lista).Funcion lambda: Iterar en una lista de numeros para saber si son V or F usando map y list.
+def p4():
+    numbers = [1, 2, 3, 4]
+    cuadrados = list(map(lambda x, i: x % 2 == 0, numbers))
+    print(cuadrados)
+
+# 4v2(m columna).Funcion for + lambda: Iterar en una lista de numeros para saber si son V or F.
+def p4v2():
+    x = [1, 2, 3, 4]
+    for y in x:
+        cuadrados = lambda y: y % 2 == 0
+        resultado = cuadrados(y)
+        print(f"[+] El elemento {y} es par?: {resultado}")
+
+# 4v3(m columna).Funcion for: Iterar en una lista de numeros para saber si son V or F.
+def p4v3():
+    lista = [1, 2, 3, 4]
+    for x in lista:
+        respuesta = x % 2 == 0
+        print(f"valor = {respuesta}")
+
+## 5(m lista) = 4.Funcion lambda: Mostrar el elemento y no el valor(inverso) usando filter y list.
+def p5():
+    numbers = [1, 2, 3, 4]
+    pares = list(filter(lambda x: x % 2 == 0, numbers))
+    print(pares)
+
+# 5v2(m columna).Funcion for + lambda + if: Mostrar el elemento y no el valor(inverso).
+def p5v2():
+    x = [1, 2, 3, 4]
+    for y in x:
+        pares = lambda y: y % 2 == 0
+        resultado = pares(y)
+        if resultado:
+            print(f"Elemento par: {y}")
+
+# 5v3(m columna).Funcion for + if: Mostrar el elemento y no el valor(inverso).
+def p5v3():
+    x = [1, 2, 3, 4]
+    for y in x:
+        pares = y % 2 == 0
+        if pares:
+            print(f"Elemento par: {y}")

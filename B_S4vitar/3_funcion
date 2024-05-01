@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+## 1.Funcion def(dentro de otro def): Suma de parametros + return.
+def p1():
+    def sum(x, y):
+        return x + y
+    
+    resultado = sum(2, 6)
+    print(f"El resultado es {resultado}")
+
+## 2.Funcion def(dentro de otro def): Parametro par(Verdaro o falso) + return.
+def p2():
+    def par(numero):
+        return numero % 2 == 0
+
+    resultado = par(4) 
+    print(f"El resultado es {resultado}")

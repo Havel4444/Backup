@@ -51,13 +51,13 @@ LEN:
 - len() es una función built-in de Python que devuelve la longitud de una lista (es decir, el número de elementos que contiene).
 ```python
 mi_lista = ["pato", "hormiga", "gato"]
-len(mi_lista) #= 3
+total = len(mi_lista) #= 3
 ```
 INDEX:
 - index() es un método de lista que devuelve el índice del primer elemento que coincide con el valor especificado.
 ```python
 mi_lista = [1, 1, 2, 3]
-mi_lista.index(1) #= 0
+indice = mi_lista.index(1) #= 0
 ```
 MI_LISTA\[ ]:
 - mi_lista[] es la notación para acceder a un elemento de una lista por su índice.
@@ -75,7 +75,7 @@ SET:
 - set() es una función built-in de Python que devuelve un conjunto (set) a partir de una lista.
 ```python
 mi_lista = [1, 2, 2, 3, 3, 4, 5, 5, 5, 5, 5]
-mi_lista.set() #= {1, 2, 3, 4, 5}
+agrupamiento = set(mi_lista) #= {1, 2, 3, 4, 5}
 ```
 SUM:
 - sum() es una función built-in de Python que devuelve la suma de todos los elementos de una lista.
@@ -96,28 +96,17 @@ MAX:
 mi_lista = [1, 2, 3, 4, 5]
 print(max(mi_lista))  # 5
 ```
+REVERSE:
+- reverse() es un método de lista que invierte el orden de los elementos de la lista. 
+- Nota que también existe una función reversed() que devuelve un iterador que itera sobre la lista en orden inverso, pero no modifica la lista original.
+```python
+mi_lista = [1, 2, 3, 4, 5]
+mi_lista.reverse()
+print(mi_lista)  # [5, 4, 3, 2, 1]
+```
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# SCRIPT
+### SIN
