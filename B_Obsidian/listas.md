@@ -28,7 +28,7 @@ sorted(mi_lista)
 mi_lista.sort()
 ```
 DEL:
-- Del es un statement de Python que se utiliza para eliminar objetos o elementos de una lista por su indice.
+- Del es un statement(declaracion) de Python que se utiliza para eliminar objetos o elementos de una lista por su indice.
 ```python
 del mi_lista[0]
 ```
@@ -104,7 +104,13 @@ mi_lista = [1, 2, 3, 4, 5]
 mi_lista.reverse()
 print(mi_lista)  # [5, 4, 3, 2, 1]
 ```
-
+DESEMPAQUETADO:
+- En Python, el desempaquetado de lista es una forma concisa de asignar valores a varias variables al mismo tiempo. Es una característica muy útil y comúnmente utilizada en el lenguaje.
+```python
+mi_lista = [1, 2, 3]
+a, b, c = mi_lista
+print(a, b, c)
+```
 
 
 

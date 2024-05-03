@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "0d3be382bcefced4",
+            "id": "5d30d4e307679f94",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#Git",
+                "query": "#Sed",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -80,7 +80,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -161,11 +162,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0d3be382bcefced4",
+  "active": "5d30d4e307679f94",
   "lastOpenFiles": [
-    "Chest/Courses/Folder_python/index_python.md",
     "Chest/Courses/index.md",
     "listas.md",
+    "Chest/Courses/Folder_python/index_python.md",
+    "Chest/Courses/Folder_linux/S4vitar coleccion find and grep.md",
     "Chest/Courses/Folder_python/variables y tipos de datos en python.md",
     "Chest/Courses/Folder_python/shebang y convenios.md",
     "funciones lambda anonimos.md",
@@ -187,7 +189,6 @@
     "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
     "Chest/Courses/Folder_python",
     "Chest/Courses/Folder_linux/S4vitar clase 7 permisos especiales.md",
-    "Chest/Courses/Folder_linux/S4vitar coleccion find and grep.md",
     "Chest/Courses/Folder_linux/S4vitar clase 2 introduccion a linux 2.md",
     "Chest/Courses/Folder_sheets/index_sheets.md",
     "Chest/Courses/Folder_linux/S4vitar conexion ssh.md",

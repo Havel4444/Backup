@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+## 1. Condicional if: uso de "<=;>=;==;!=", "and" y "or".
+def p1():
+    edad = 16
+    son = False
+    if edad >= 18 and edad <= 60 or son == True:
+        print("Mayor de edad.")
+    elif edad < 18:
+        print("Menor de edad.")
+
+## 2. Condicional if: Aplicando if en una lista
+def p2():
+    list_if = [1, 3, 4, 5]
+    if 1 in list_if:
+        print("El numero 1 esta en la lista.")
+
+## 3. Condicional if: Operador terniario. Operacion en una linea. 
+def p3():
+    age = 44 
+    ask = "Eres mayor de edad" if age >= 18 else "Eres menor de edad"
+    print(ask)

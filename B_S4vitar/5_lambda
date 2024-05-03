@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-## FUNCIONES LAMBDA ANONIMOS: 
 
 ## 1.Funcion lambda: 1 parametro elevado a al cuadrado.
 def p1():
@@ -17,7 +16,7 @@ def p3():
     cuadrados = list(map(lambda x: x**2, numbers))
     print(cuadrados)
 
-## 4(m lista).Funcion lambda: Iterar en una lista de numeros para saber si son V or F usando map y list.
+## 4 .Funcion lambda: Iterar en una lista de numeros para saber si son V or F usando map y list.
 def p4():
     numbers = [1, 2, 3, 4]
     cuadrados = list(map(lambda x, i: x % 2 == 0, numbers))
@@ -38,7 +37,7 @@ def p4v3():
         respuesta = x % 2 == 0
         print(f"valor = {respuesta}")
 
-## 5(m lista) = 4.Funcion lambda: Mostrar el elemento y no el valor(inverso) usando filter y list.
+## 5. Funcion lambda: Mostrar el elemento y no el valor(inverso) usando filter y list.
 def p5():
     numbers = [1, 2, 3, 4]
     pares = list(filter(lambda x: x % 2 == 0, numbers))

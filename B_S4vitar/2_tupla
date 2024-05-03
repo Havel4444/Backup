@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+
+## 1. Notacion []:
+def p1():
+    mi_lista = ("perro", "gato", "raton")
+    resultado = mi_lista[0]
+    print(resultado)
+
+## 2. Metodo index:
+def p2():
+    mi_lista = ("perro", "gato", "raton")
+    resultado = mi_lista.index("perro")
+    print(resultado)
+
+## 3. Desempaquetado: 
+def p3():
+    elementos = (1, 2, 3)
+    a, b, c = elementos
+    print(c, b, a)
+
+## 4. Funcion reversed + tuple:
+def p4():
+    mi_lista = (1, 2, 3)
+    resultado = tuple(reversed(mi_lista))
+    print(resultado)
+
+## 5. Funcion set:
+def p5():
+    mi_lista = (1, 1, 1, 1, 2, 3)
+    resultado = set(mi_lista)
+    print(resultado)
+
+## 6. Funcion len:
+def p6():
+    mi_lista = (1, 1, 1, 1, 2, 3)
+    resultado = len(mi_lista)
+    print(resultado)
+
+## 7. Metodo count:
+def p7():
+    mi_lista = (1, 1, 1, 1, 2, 3)
+    resultado = mi_lista.count(1)
+    print(resultado)
+
+## 8. Funcion sum, min y max:
+def p8():
+    mi_lista = [1, 2, 3]
+    resultado_suma = sum(mi_lista)
+    resultado_minimo = min(mi_lista)
+    resultado_maximo = max(mi_lista)
+    print(resultado_suma)
+    print(resultado_minimo)
+    print(resultado_maximo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
