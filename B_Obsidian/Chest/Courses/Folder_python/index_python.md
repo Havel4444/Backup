@@ -11,11 +11,17 @@ CAPITULO 2
 - 6- [[control de flujo]] 
 - 7- [[funciones y ambito de variable]]
 - 8- [[funciones lambda anonimos]]
-- 9-
+
+- 10- [[condicional]]
+- 11- [[bucles]]
+- 12- [[lambda]]
+
 
 CAPITULO 3
 - 1- [[listas]]
-
+- 2- [[tuplas]]
+- 3- [[conjuntos]] 
+- 
 
 
 
