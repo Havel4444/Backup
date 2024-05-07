@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+
+# Juegos:
+juegos = {
+    "Baldur gate",
+    "Dota 2",
+    "The walking dead",
+    "Mario bros"
+}
+
+# Genero:
+generos = {
+    "Baldur gate": "Rol",
+    "Dota 2": "Moba",
+    "The walking dead": "Aventura",
+    "Mario bros": "Aventura"
+}
+
+# Ventas y stock
+ventas_y_stock = {
+    "Baldur gate": (1000, 0),
+    "Dota 2": (600, 400),
+    "The walking dead": (400, 600),
+    "Mario bros": (1000, 1000)
+}
+
+# Clientes.
+clientes = {
+    "Baldur gate": {"Juan", "Pedro", "Luis", "Ana"},
+    "Dota 2": {"Eva", "Max", "Leo", "Sofia"},
+    "The walking dead": {"Tom", "Lena", "Rafa", "Nina"},
+    "Mario bros": {"Paco", "Cris", "Javi", "Emma"}
+}
+
+for game in juegos:
+    print(f"[i] Resumen: {game}\n")
+    print(f"\t[+] Descripcion: ")
+    print(f"\t[+] Genero: {generos[game]}")
+    print(f"\t[+] Ventas: {ventas_y_stock[game][0]} unidades")
+    print(f"\t[+] Clientes: {', '.join(clientes[game])}\n")
+
+
+
+
+
+
+
+
+
