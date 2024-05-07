@@ -46,13 +46,20 @@ def p7():
     result = my_set_1.issubset(my_set_2)
     print(result)
 
-## 8. Practice 1: Usando range itera en un conjunto(set) del 0 al 10000 y verifica si esta un valor.
+## 8. difference: Si todo de 1 esta en 2 no hay diferencia.
 def p8():
+    my_set_1 = {1, 2, 3, 4}
+    my_set_2 = {1, 2, 3}
+    diferencia = my_set_1.difference(my_set_2)
+    print(diferencia)
+
+## 9. Practice 1: Usando range itera en un conjunto(set) del 0 al 10000 y verifica si esta un valor.
+def p9():
     my_set = set(range(10000))
     print(12 in my_set) 
 
-## 9. Practice 2: Mostrar al usuario que esta en ambas plataformas y todos los usuario de ambas plataformas.
-def p9():
+## 10. Practice 2: Mostrar al usuario que esta en ambas plataformas y todos los usuario de ambas plataformas.
+def p10():
     facebook = {"paco", "pancho", "pedro"}
     twitter = {"pancho", "juan", "sancho"}
     ambos = facebook.intersection(twitter)

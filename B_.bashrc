@@ -140,6 +140,8 @@ alias dogi="~/.dotfiles/./sgit.sh"
 alias kiop="~/Desktop/code/./opacity.sh"
 # Backup
 alias bu="bash /home/havel/Backup/menu_files.sh"
+# Default.py
+alias scpy="cat /home/havel/Data/Scripts/Python/default.py | cpou"
 
 # Prueba
 function ippr() {

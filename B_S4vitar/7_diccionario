@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+
+## 1. Clave: Iterar en un diccionario con for.
+def p1():
+    my_dictionary = {"Pera": 1, "Manzana": 9999999}
+    for i, y in my_dictionary.items():
+        print(i, y)
+
+## 2. Notacion []: Mostrar el valor de la clave.
+def p2():
+    my_dictionary = {"Pera": 9, "Manzana": 4, "Zandia": 7}
+    print(my_dictionary["Pera"])
+
+## 3. Edicion: Agregar elementos. 
+def p3():
+    my_dictionary = {"Pera": 9, "Manzana": 4, "Zandia": 7}
+    my_dictionary["Banana"] = 12
+    print(my_dictionary)
+
+## 4. Ediccion: modificar con pop/del y eliminar elementos.
+def p4():
+    my_dictionary = {"Pera": 9, "Manzana": 4, "Zandia": 7}
+    my_dictionary["Pera"] = 3
+    # Quiero que la clave "Limon" tenga el mismo valor que "Pera" y luego borra el elemento "Pera".
+    my_dictionary["Limon"] = my_dictionary.pop("Pera")  
+    # Eliminar un elemento.
+    del my_dictionary["Zandia"]
+    print(my_dictionary)
+
+## 5. Clear: 
+def p5():
+    my_dictionary = {"Pera": 9, "Manzana": 4, "Zandia": 7}
+    my_dictionary.clear()
+    print(my_dictionary)
+
+## 6. Len: Cuenta cada elemento.
+def p6():
+    my_dictionary = {"Pera": 9, "Manzana": 4, "Zandia": 7}
+    longitud = len(my_dictionary)
+    print(longitud)
+
+## 7. Diccionario y bucle for lineal: Usar range y devolver el 0² de cada clave.
+def p7():
+    cuadrado = {x: x**2 for x in range(5)}
+    # Valor al cuadrado de la clave 4.
+    print(cuadrado[4])
+    print(cuadrado)
+
+## 8. Keys y Values: Mostrar las claves y valores.
+def p8():
+    my_dictionary = {"Pera": 9, "Manzana": 4, "Zandia": 7}
+    print(my_dictionary.keys())
+    print(my_dictionary.values())
+
+## 9. Get: Buscar el valor de la clave pero en caso contrario hacer lo siguiente.
+def p9():
+    my_dictionary = {"Pera": 9, "Manzana": 4, "Zandia": 7}
+    busqueda = my_dictionary.get("Limon", "No encontrado.")
+    print(busqueda)
+
+## 10. Diccionario dentro de otro diccionario: Mostrar valor de la clave que esta dentro de otro diccionario.
+def p10():
+    my_dictionary = {
+        "name": "juan",
+        "apellido": {"primero": "torres", "segundo": "castillo"},
+        "edad": 12
+    }
+    print(my_dictionary["apellido"]["primero"])
+
+## 11. Diccionario + bucle for: Iterar en cada clave y valor usando keys y volues.
+def p11():
+    my_dictionary = {"Pera": 9, "Manzana": 4, "Zandia": 7}
+    for i in my_dictionary.values():
+        print(i)
+
+
+
+
+
+
+
