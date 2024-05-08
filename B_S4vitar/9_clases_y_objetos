@@ -1,0 +1,84 @@
+#!/usr/bin/env python3
+
+## 1. Clase y objeto: Definiendo el nombre, edad y grado.
+def p1():
+    class Persona:
+        # Constructor
+        def __init__(self, nombre, edad, grado):
+            self.nombre = nombre
+            self.edad = edad
+            self.grado = grado
+    
+        # Metodo.
+        def saludo(self):
+            return f"Hola, soy {self.nombre} y tengo {self.edad} de grado {self.grado}."
+    
+    # Objeto = Instancia
+    diego = Persona("Diego", 24, "A")
+    roberto = Persona("roberto", 14, "F")
+    
+    print(diego.saludo())
+    print(roberto.saludo())
+
+## 2. Clase y objeto: Estado de una cuenta + agregar y retirar dinero.
+def p2():
+    class Banco: 
+        def __init__(self, nombre, dni, cuenta, dinero):
+            self.cuenta = cuenta
+            self.nombre = nombre
+            self.dni = dni
+            self.dinero = dinero
+
+        def plata(self):
+            return f"[#][{self.nombre}] Cuenta: ${self.dinero}."
+
+        def deposito(self, money):
+            self.dinero += money
+            return f"[+][{self.nombre}] Depositado: ${money}; Cuenta actual: ${self.dinero}."
+
+        def retirar(self, yenom):
+            if yenom > self.dinero:
+                return f"[!][{self.nombre}] Denegado. El valor ${yenom} excede tu cuenta: ${self.dinero}."
+            else:
+                self.dinero -= yenom 
+                return f"[+][{self.nombre}] Retirado: ${yenom}; Restante: ${self.dinero}."
+
+    marcelo = Banco("Marcelo", 42440777, 12345678910, 1000)
+    
+    print(marcelo.plata())
+    print(marcelo.deposito(2896))
+    print(marcelo.retirar(4000))
+
+## 3. Calculo matematico: Conseguir el area de una figura. 
+def p3():
+    class Area:
+        def __init__(self, base, altura):
+            self.base = base 
+            self.altura = altura 
+            
+        def area_triangulo(self):
+            calculo = self.base * self.altura // 2
+            return f"[+] Area del triangulo: {calculo}"            
+
+        def area_cuadrado(self):
+            calculo = self.base * self.altura
+            return f"[+] Area del cuadrado: {calculo}"            
+
+    triangulo = Area(8, 4)
+    cuadrado = Area(2, 5)
+    print(triangulo.area_triangulo())
+    print(cuadrado.area_cuadrado())
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -32,12 +32,20 @@ clientes = {
     "Mario bros": {"Paco", "Cris", "Javi", "Emma"}
 }
 
-for game in juegos:
+def nombre(game):
     print(f"[i] Resumen: {game}\n")
     print(f"\t[+] Descripcion: ")
     print(f"\t[+] Genero: {generos[game]}")
     print(f"\t[+] Ventas: {ventas_y_stock[game][0]} unidades")
     print(f"\t[+] Clientes: {', '.join(clientes[game])}\n")
+
+for i in juegos:
+    nombre(i)
+
+total = lambda: min(values for values, _ in ventas_y_stock.values())
+print(f"Total de ventas: {total()}")
+
+
 
 
 

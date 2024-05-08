@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "conjuntos.md",
+                "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#Sed",
+                "query": "#Fondo",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conjuntos.md",
+                "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conjuntos.md",
+                "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conjuntos.md"
+                "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md"
               }
             }
           }
@@ -164,8 +164,8 @@
   },
   "active": "5d30d4e307679f94",
   "lastOpenFiles": [
-    "Chest/Courses/Folder_python/index_python.md",
     "conjuntos.md",
+    "Chest/Courses/Folder_python/index_python.md",
     "tuplas.md",
     "listas.md",
     "Chest/Courses/index.md",
