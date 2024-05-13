@@ -49,35 +49,77 @@ def p2():
     print(marcelo.deposito(2896))
     print(marcelo.retirar(4000))
 
-## 3. Calculo matematico: Conseguir el area de una figura. 
+## 3. b*h/2: Conseguir el area de una figura; Usar @property + objeto.
 def p3():
     class Area:
         def __init__(self, base, altura):
             self.base = base 
             self.altura = altura 
-            
+
         def area_triangulo(self):
             calculo = self.base * self.altura // 2
-            return f"[+] Area del triangulo: {calculo}"            
-
-        def area_cuadrado(self):
-            calculo = self.base * self.altura
-            return f"[+] Area del cuadrado: {calculo}"            
+            return f"\n[+] Area del triangulo: {calculo}"            
 
     triangulo = Area(8, 4)
-    cuadrado = Area(2, 5)
-    print(triangulo.area_triangulo())
-    print(cuadrado.area_cuadrado())
+    print(triangulo.area_triangulo)
 
+## 4. __str__: Usar @property en un objeto.
+def p4():
+    class Area:
+        def __init__(self, base, altura):
+            self.base = base 
+            self.altura = altura 
 
+        @property # Forzar a ejecutar el metodo sin parentesis.
+        def area_triangulo(self):
+            calculo = self.base * self.altura // 2
+            return f"\n[+] Area del triangulo: {calculo}"            
 
+        def __str__(self): # C. para mostrar los valores del objeto.
+            return f"\n[#] Base: {self.base}; Altura: {self.altura}"
 
+    triangulo = Area(8, 4)
+    print(triangulo)
 
+## 5. __eq__: 
+def p5():
+    class Area:
+        def __init__(self, base, altura):
+            self.base = base 
+            self.altura = altura 
+        
+        def area_triangulo(self):
+            calculo = self.base * self.altura // 2
+            return f"\n[+] Area del triangulo: {calculo}"            
 
+        def __eq__(self, otro):
+            return self.base == otro.base and self.altura == otro.altura
 
+    triangulo_1 = Area(4, 4)
+    triangulo_2 = Area(8, 4)
+    print(triangulo_1.area_triangulo())
+    print(triangulo_2.area_triangulo())
+    print(f"\n¿Son iguales?: {triangulo_1 == triangulo_2}")
 
+## 6. Staticmethod:
+def p6():
+    class Auto:
+        valor = 15654
 
+        def __init__(self, marca, modelo, costo):
+            self.marca = marca
+            self.modelo = modelo
+            self.costo = costo
 
+        @staticmethod # Decorador.
+        def ahorrado(disponible):
+            # Devuelve un valor booleano.
+            #return f"{disponible > Auto.valor}: Puedes comprarlo."
+            return "Puedes comprarlo." if disponible > Auto.valor else "No puedes comprarlo." 
+
+    cuenta_bancaria = Auto("Renault", "Alaskan", 15654)
+
+    print(Auto.ahorrado(16000))
 
 
 

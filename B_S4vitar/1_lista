@@ -107,3 +107,27 @@ def p17():
     lista_2 = [3, 4] 
     lista_1.extend(lista_2)
     print(lista_1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
