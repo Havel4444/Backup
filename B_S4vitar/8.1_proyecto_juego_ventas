@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+#
 # Juegos:
 juegos = {
     "Baldur gate",
@@ -44,14 +44,3 @@ for i in juegos:
 
 total = lambda: min(values for values, _ in ventas_y_stock.values())
 print(f"Total de ventas: {total()}")
-
-
-
-
-
-
-
-
-
-
-

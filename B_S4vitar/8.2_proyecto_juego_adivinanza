@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+
+import random
+
+descripciones_1 = {
+"Vegeta": "Un guerrero noble y orgulloso, con una voluntad de hierro y una ambición que lo lleva a superar sus límites.",
+"Goku": "Un héroe bondadoso y valiente, con un corazón puro y una determinación que lo llevan a proteger a los demás.",
+"Gojo": "Un estratega astuto y despiadado, con una mente fría y una habilidad para analizar y vencer a sus adversarios.",
+"Sukuna": "Un demonio poderoso y malvado, con un alma oscura y una sed de destrucción que lo llevan a sembrar el terror."
+}
+
+descripciones_2 = {
+"Vegeta": "Un guerrero orgulloso y poderoso, con un pasado marcado por la lucha y la ambición.",
+"Goku": "Un héroe inocente y valiente, con un corazón puro y una determinación inquebrantable.",
+"Gojo": "Un estratega calculador y despiadado, con una mente fría y una voluntad de hierro.",
+"Sukuna": "Un demonio destructor y malvado, con un alma oscura y un poderío sobrenatural."
+}
+
+descripciones_3 = {
+"Vegeta": "Un príncipe de la fuerza, con un orgullo y una ambición que lo llevan a luchar por la supremacía.",
+"Goku": "Un luz de la esperanza, con un corazón puro y una determinación que lo llevan a proteger a los demás.",
+"Gojo": "Un ojo de la tormenta, con una mente fría y una estrategia que lo llevan a vencer a cualquier adversario.",
+"Sukuna": "Un señor de la oscuridad, con un alma oscura y un poderío sobrenatural que lo llevan a sembrar el terror."
+}
+
+all_descriptions = [descripciones_1, descripciones_2, descripciones_3]
+descriptions_123 = random.choice(all_descriptions)
+
+personajes = ["Vegeta", "Goku", "Gojo", "Sukuna"]
+personaje = random.choice(personajes)
+
+descripcion = descriptions_123[personaje]
+
+def adivinanza():
+    print(f"\n[#] --- Adivinanza --- [#]\n")
+    print(f"[#] Adivina al personaje con la siguiente descripcion: {descripcion}.")
+
+    intentos = 3 
+    while intentos > 0:
+        adivinar = input(f"\n¿Quien es?: ").strip().capitalize()
+        if adivinar == personaje:
+            print(f"\n[+] Ganaste!.\n")
+            break
+        else:
+            intentos -= 1
+            if intentos > 0:
+                print(f"\n[!] Incorreto. Intentos restantes: {intentos}.\n")
+            else:
+                print(f"\n[+] Perdiste!. Personaje correcto {personaje}.\n")
+                break
+
+def main():
+    adivinanza()
+
+if __name__ == "__main__":
+    main()

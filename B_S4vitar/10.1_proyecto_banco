@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+
+clear_screen = lambda: os.system("clear")
+
+class Bank:
+    def __init__(self, id, nombre_completo, saldo):
+        self.id = id 
+        self.nombre_completo = nombre_completo
+        self.saldo = saldo
+
+    def estado(self):
+        clear_screen()
+        print(f"\n[#] ---Bank Star: Estado---\n")
+        print(f"[#] ID: {self.id}.")
+        print(f"[#] Nombre: {self.nombre_completo}.")
+        print(f"[#] Saldo: {self.saldo}.\n")
+    def depositar(self, meter):
+        clear_screen()
+        self.saldo += meter
+        print(f"\n[#] ---Bank Star: Depositar---\n")
+        print(f"[+] Monto depositado: {meter}; [!] Saldo: {self.saldo}.\n")
+
+    def retirar(self, sacar):
+        clear_screen()
+        if sacar > self.saldo:
+            print(f"\n[#] ---Bank Star: Retirar---\n")
+            print(f"[!] Monto denegado: Excede su saldo de ${self.saldo}.\n")
+            show_menu_error()
+        else:
+            self.saldo -= sacar
+            print(f"\n[#] ---Bank Star: Retirar---\n")
+            print(f"[+] Monto retirado: {sacar}; [!] Saldo: {self.saldo}.\n")
+
+objeto = Bank(1234, "Juan Sarmiento", 11000)
+
+def menu_text_1():
+    clear_screen()
+    print(f"\n[#] ---Bank Star: Menu---\n")
+    print("[*] 1) Estado.")
+    print("[*] 2) Depositar.")
+    print("[*] 3) Retirar.")
+    print("[*] 4) Salir.\n")
+
+def menu_text_2():
+    print(f"\n[*] 1) Volver.")
+    print(f"[*] 2) Salir.\n")
+
+def menu_text_3():
+    print(f"\n[*] 1) Reintentar.")
+    print(f"[*] 2) Salir.\n")
+
+def show_menu_again():
+    menu_text_2()
+    again = int(input()) 
+    if again == 1:
+        menu_text_1()
+        opcion = int(input())
+        options_input(opcion)
+    elif again == 2:
+        sys.exit()
+
+def show_menu_error():
+    menu_text_3()
+    again = int(input()) 
+    if again == 1:
+        withdraw()
+        show_menu_again()
+    elif again == 2:
+        sys.exit()
+
+def options_input(option):
+    if option == 1:
+        state()
+        show_menu_again()
+    elif option == 2:
+        deposit()
+        show_menu_again()
+    elif option == 3:
+        withdraw()
+        show_menu_again()
+    elif option == 4:
+        sys.exit()
+
+def state():
+    clear_screen()
+    objeto.estado()
+
+def deposit():
+    clear_screen()
+    print(f"\n[#] ---Bank Star: Operacion---\n")
+    ain = int(input(f"[#] Monto a depositar: "))
+    objeto.depositar(ain)
+    
+def withdraw():
+    clear_screen()
+    print(f"\n[#] ---Bank Star: Operacion---\n")
+    out = int(input(f"[#] Monto a retirar: "))
+    objeto.retirar(out)
+
+while True:
+    menu_text_1()
+    opcion = int(input())
+    options_input(opcion)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
