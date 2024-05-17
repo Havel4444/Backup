@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+import random
+import time
+import os
+import sys
+
+# Tamaño del tablero
+ancho = 20
+alto = 10
+
+viborita = [(ancho // 2, alto // 2)]
+fruta = (random.randint(1, ancho), random.randint(1, alto))
+movimiento = ["w", "s", "a", "d"]
+puntuacion = 0
+
+def tablero():
+    for y in range(1, alto + 1):
+        for x in range(1, ancho + 1):
+            if (x, y) in viborita:
+                print("O", end=" ")
+            elif (x, y) == fruta:
+                print("Z", end=" ")
+            else:
+                print(' ', end=" ")
+        print()
+
+def mover_snake():
+    x, y = viborita[0]
+
+    if direccion == "w":
+            y -= 1
+    elif direccion == "s":
+            y += 1
+    elif direccion == "a":
+            x -= 1
+    elif direccion == "d":
+            x += 1
+    else:
+        print("[!] Error: valor incorecto.")
+
+    viborita.insert(0, (x, y))
+
+    if viborita.count((x, y)) > 1:
+        print("perdiste")
+        sys.exit()
+    elif (x, y) == fruta:
+        generar_fruta()
+        global puntuacion
+        puntuacion += 1
+    else:
+        viborita.pop()
+
+def generar_fruta():
+    global fruta
+    fruta = (random.randint(1, ancho), random.randint(1, alto))
+    while fruta in viborita:
+        fruta = (random.randint(1, ancho), random.randint(1, alto))
+
+def game():
+    while True:
+        os.system("clear")
+        print(f"\n[#] --- Game: Viborita --- [#]\n")
+        tablero()
+        print(f"[#] Inserte para iniciar: A, S, D o W\n")
+        tecla = input(f"[=] ").lower()
+
+        global movimiento
+        if tecla in movimiento:
+            global direccion
+            direccion = tecla 
+            mover_snake()
+
+game()
+
+
+
+
+
+
+
+
+
+
+
+
