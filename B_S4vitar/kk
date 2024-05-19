@@ -1,0 +1,100 @@
+#!/usr/bin/env python3
+import random
+import sys
+import os
+import curses
+import time
+
+ancho = 20
+alto = 10
+
+viborita = [(ancho // 2, alto // 2)]
+fruta = (random.randint(1, ancho), random.randint(1, alto))
+movimiento = ["w", "a", "s", "d"]
+puntos = 0
+
+pared_superior = [(i, 0) for i in range(1, 21)]
+pared_inferior = [(i, 11) for i in range(1, 21)]
+pared_izquierdo = [(0, i) for i in range(1, 11)]
+pared_derecho = [(21, i) for i in range(1, 11)]
+pared = pared_superior + pared_inferior + pared_izquierdo + pared_derecho
+
+direccion = "d"
+
+def tablero(stdscr):
+    for y in range(1, alto + 1):
+        stdscr.addstr(y + 3, 0, " " + "|")  # +3 para dejar espacio para el título y bordes
+        for x in range(1, ancho + 1):
+            if (x, y) in viborita:
+                stdscr.addstr(y + 3, x * 2, "0")
+            elif (x, y) == fruta:
+                stdscr.addstr(y + 3, x * 2, "X")
+            else:
+                stdscr.addstr(y + 3, x * 2, " ")
+        stdscr.addstr(y + 3, (ancho + 1) * 2, "|")
+    borde_x = " " + "#" * 42
+    stdscr.addstr(3, 0, borde_x)
+    stdscr.addstr(alto + 4, 0, borde_x)
+
+def mover_viborita():
+    x, y = viborita[0]
+    if direccion == "w":
+        y -= 1
+    elif direccion == "s":
+        y += 1
+    elif direccion == "a":
+        x -= 1
+    elif direccion == "d":
+        x += 1
+
+    viborita.insert(0, (x, y))
+
+    if viborita.count((x, y)) > 1 or viborita[0] in pared:
+        print("[!] ------------------- [!]")
+        print("[!] ---- PERDISTE ----- [!]")
+        print("[!] ------------------- [!]")
+        sys.exit()
+    elif fruta in viborita:
+        generar_fruta()
+        global puntos
+        puntos += 1
+    else:
+        viborita.pop()
+
+def generar_fruta():
+    global fruta
+    fruta = (random.randint(1, ancho), random.randint(1, alto))
+    while fruta in viborita:
+        fruta = (random.randint(1, ancho), random.randint(1, alto))
+
+def main(stdscr):
+    global direccion
+
+    curses.curs_set(0)
+    stdscr.nodelay(1)
+    stdscr.timeout(100)  # Refresh every 100 ms
+
+    while True:
+        tecla = stdscr.getch()
+        if tecla == ord('w') and direccion != "s":
+            direccion = "w"
+        elif tecla == ord('a') and direccion != "d":
+            direccion = "a"
+        elif tecla == ord('s') and direccion != "w":
+            direccion = "s"
+        elif tecla == ord('d') and direccion != "a":
+            direccion = "d"
+
+        mover_viborita()
+        stdscr.clear()
+        stdscr.addstr(0, 0, f" -------------------- ")
+        stdscr.addstr(1, 0, f" ---- SNAKE GAME ---- ")
+        stdscr.addstr(2, 0, f" -------------------- ")
+        tablero(stdscr)
+        stdscr.addstr(alto + 5, 0, " " + f"[#] PUNTOS: {puntos}")
+        stdscr.refresh()
+        time.sleep(0.1)
+
+if __name__ == "__main__":
+    curses.wrapper(main)
+
