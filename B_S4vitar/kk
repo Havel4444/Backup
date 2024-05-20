@@ -93,7 +93,7 @@ def main(stdscr):
         tablero(stdscr)
         stdscr.addstr(alto + 5, 0, " " + f"[#] PUNTOS: {puntos}")
         stdscr.refresh()
-        time.sleep(0.1)
+        #time.sleep(0.1)
 
 if __name__ == "__main__":
     curses.wrapper(main)

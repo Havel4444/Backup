@@ -1,52 +1,75 @@
 #!/usr/bin/env python3
 import random
-import time
-import os
 import sys
+import os
 
-# Tamaño del tablero
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+BLUE = "\033[34m"
+RESET = "\033[0m"
+
 ancho = 20
 alto = 10
 
 viborita = [(ancho // 2, alto // 2)]
 fruta = (random.randint(1, ancho), random.randint(1, alto))
-movimiento = ["w", "s", "a", "d"]
-puntuacion = 0
+movimiento = ["w", "a", "s", "d"]
+puntos = 0
+
+pared_superior = [(i, 0) for i in range(1, (21))]
+pared_inferior = [(i, 11) for i in range(1, (21))]
+
+pared_izquierdo = [(0, i) for i in range(1, (11))]
+pared_derecho = [(21, i) for i in range(1, (11))]
+
+
+pared = pared_superior + pared_inferior + pared_izquierdo + pared_derecho
+
+def borde_eje_x():
+    print("#" * 43)
+def borde_eje_y():
+    print("|", end=" ")
 
 def tablero():
+    borde_eje_x()
     for y in range(1, alto + 1):
+        borde_eje_y()
         for x in range(1, ancho + 1):
+
             if (x, y) in viborita:
-                print("O", end=" ")
+                print(f"{GREEN}0{RESET}", end=" ")
             elif (x, y) == fruta:
-                print("Z", end=" ")
+                print(f"{BLUE}X{RESET}", end=" ")
             else:
-                print(' ', end=" ")
+                print(" ", end=" ")
+
+        borde_eje_y()
         print()
+    borde_eje_x()
 
-def mover_snake():
+def mover_viborita():
     x, y = viborita[0]
-
     if direccion == "w":
-            y -= 1
+        y -= 1
     elif direccion == "s":
-            y += 1
+        y += 1
     elif direccion == "a":
-            x -= 1
+        x -= 1
     elif direccion == "d":
-            x += 1
-    else:
-        print("[!] Error: valor incorecto.")
+        x += 1
 
-    viborita.insert(0, (x, y))
+    viborita.insert(0, (x, y)) 
 
-    if viborita.count((x, y)) > 1:
-        print("perdiste")
+    if viborita.count((x, y)) > 1 or viborita[0] in pared:
+        print(f"\n{RED}[!] ---------------- [!]{RESET}")
+        print(f"{RED}[!] --- PERDISTE --- [!]{RESET}")
+        print(f"{RED}[!] ---------------- [!]{RESET}\n")
         sys.exit()
-    elif (x, y) == fruta:
+    elif fruta in viborita:
         generar_fruta()
-        global puntuacion
-        puntuacion += 1
+        global puntos
+        puntos += 1
     else:
         viborita.pop()
 
@@ -56,30 +79,19 @@ def generar_fruta():
     while fruta in viborita:
         fruta = (random.randint(1, ancho), random.randint(1, alto))
 
-def game():
+def main():
     while True:
         os.system("clear")
-        print(f"\n[#] --- Game: Viborita --- [#]\n")
+        print(f"\n[#] ----------------- [#]")
+        print(f"[#] --- SNAKE GAME--- [#]")
+        print(f"[#] ----------------- [#]\n")
         tablero()
-        print(f"[#] Inserte para iniciar: A, S, D o W\n")
-        tecla = input(f"[=] ").lower()
-
-        global movimiento
+        print(f"\n{YELLOW}[#] PUNTOS: {puntos}{RESET}")
+        print(f"\n[#] Usa W, A, S, D para moverte.")
+        tecla = input("[*]: ").lower()
         if tecla in movimiento:
             global direccion
-            direccion = tecla 
-            mover_snake()
+            direccion = tecla
+            mover_viborita()
 
-game()
-
-
-
-
-
-
-
-
-
-
-
-
+main()
