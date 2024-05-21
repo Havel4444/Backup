@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+
+import random
+import os
+import sys
+
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+BLUE = "\033[34m"
+RESET = "\033[0m"
+
+width = 3
+high = 10
+
+car = [(width // 2 + 1, high)]
+ride_1 = [(random.randint(1, width), 1)]
+ride_2 = [(random.randint(1, width), 1)]
+motion = ['w', 'a', 'd']
+point = 0
+
+bottom_edge = [(i, 11) for i in range(1, width + 1)]
+
+left_edge = [(0, i) for i in range(high + 1)]
+right_edge = [(4, i) for i in range(high + 1)]
+
+wall = left_edge + right_edge
+
+def edge_x_axis():
+    print('|', end=' ')
+
+def board():
+    for y in range(1, high + 1):
+        print(' ' * 7, end='')
+        edge_x_axis()
+        for x in range(1, width + 1):
+            if (x, y) in car:
+                print(f'{GREEN}#{RESET}', end=' ')
+            elif (x, y) in ride_1:
+                print(f'{RED}H{RESET}', end=' ')
+            elif (x, y) in ride_2:
+                print(f'{RED}H{RESET}', end=' ')
+            else:
+                print(' ', end=' ')
+        edge_x_axis()
+        print()
+
+def move_car():
+    x, y = car[0]
+    if address == 'a':
+        x -= 1
+    else:
+        if address == 'd':
+            x +=1
+        else:
+            pass
+
+    car.insert(0, (x, y))
+    car.pop()
+    move_ride_2()
+    move_ride_1()
+
+    global ride_1
+    global ride_2
+    if car[0] in wall or ride_1[0] in car or ride_2[0] in car:
+        game_over()
+    elif ride_1[0] in bottom_edge or ride_2 in bottom_edge:
+        ride_1 = [(random.randint(1, width), 1)]
+        ride_2 = [(random.randint(1, width), 1)]
+        global point
+        point += 1
+
+def game_over():
+    os.system('clear')
+    print(f'\n{RED}[!] ----------------- [!]{RESET}')
+    print(f'{RED}[!] --- GAME OVER --- [!]{RESET}')
+    print(f'{RED}[!] ----------------- [!]{RESET}\n')
+    print(f'\n{YELLOW}[#] TOP SCORE: {point}{RESET}')
+    reset_key = input(f'\n[*] RESET? (s/n): ').lower()
+    if reset_key == 's' or reset_key == '':
+        reset_game()
+    elif reset_key == 'n':
+        sys.exit()
+    else:
+        print(f'\n[!] ERROR!!!.')
+        sys.exit()
+
+
+def reset_game():
+    global car, ride_1, ride_2, point
+    car = [(width // 2 + 1, high)]
+    ride_1 = [(random.randint(1, width), 1)]
+    ride_2 = [(random.randint(1, width), 1)]
+    point = 0
+
+def move_ride_1():
+    x, y = ride_1[0]
+    y += 1
+    ride_1.insert(0, (x, y))
+    ride_1.pop()
+def move_ride_2():
+    x, y = ride_2[0]
+    y += 1
+    ride_2.insert(0, (x, y))
+    ride_2.pop()
+
+def main():
+    while True:
+        os.system('clear')
+        print(f'\n[#] ---------------- [#]')
+        print(f'[#] --- CAR GAME --- [#]')
+        print(f'[#] ---------------- [#]\n')
+        board()
+        print(f"\n{YELLOW}[#] POINTS: {point}{RESET}")
+        key = input(f'\n[#]: ').lower()
+        if key in motion or key == '':
+            global address
+            address = key
+            move_car()
+
+main()

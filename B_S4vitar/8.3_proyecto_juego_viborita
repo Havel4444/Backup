@@ -62,10 +62,7 @@ def mover_viborita():
     viborita.insert(0, (x, y)) 
 
     if viborita.count((x, y)) > 1 or viborita[0] in pared:
-        print(f"\n{RED}[!] ---------------- [!]{RESET}")
-        print(f"{RED}[!] --- PERDISTE --- [!]{RESET}")
-        print(f"{RED}[!] ---------------- [!]{RESET}\n")
-        sys.exit()
+        fin_del_juego()
     elif fruta in viborita:
         generar_fruta()
         global puntos
@@ -78,6 +75,28 @@ def generar_fruta():
     fruta = (random.randint(1, ancho), random.randint(1, alto))
     while fruta in viborita:
         fruta = (random.randint(1, ancho), random.randint(1, alto))
+
+def fin_del_juego():
+    os.system('clear')
+    print(f"\n{RED}[!] ----------------- [!]{RESET}")
+    print(f"{RED}[!] --- GAME OVER --- [!]{RESET}")
+    print(f"{RED}[!] ----------------- [!]{RESET}\n")
+    print(f"\n{YELLOW}[#] TOP SCORE: {puntos}{RESET}")
+    respuesta = input("\n[*] RESET? (s/n): ").lower()
+    if respuesta == "s" or respuesta == '':
+        reiniciar_juego()
+    elif respuesta == "n":
+        sys.exit()
+    else:
+        print(f'\n[!] ERROR!!!.')
+        sys.exit()
+
+
+def reiniciar_juego():
+    global viborita, fruta, puntos
+    viborita = [(ancho // 2, alto // 2)]
+    fruta = (random.randint(1, ancho), random.randint(1, alto))
+    puntos = 0
 
 def main():
     while True:
@@ -94,4 +113,5 @@ def main():
             direccion = tecla
             mover_viborita()
 
-main()
+if __name__ == "__main__":
+    main()
