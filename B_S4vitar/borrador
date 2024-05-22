@@ -58,3 +58,4 @@ while True:
     y = int(input("Ingrese la coordenada Y para atacar: "))
     tablero.atacar(x, y)
     time.sleep(1)
+p11()

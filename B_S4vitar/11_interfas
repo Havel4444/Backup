@@ -1,8 +1,0 @@
-#!/usr/bin/env python3
-from tkinter import *
-raiz = Tk()
-raiz.title("Bank")
-raiz.geometry("350x500")
-raiz.config(bg="gray")
-raiz.mainloop()
-

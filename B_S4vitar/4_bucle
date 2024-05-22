@@ -1,68 +1,43 @@
 #!/usr/bin/env python3
-## 1. Bucle while: Termina cuando "i" sea mayor que 5 y else.
+
+## 1. Bucle for: Mostrar el indice y los elementos de la lista.
 def p1():
-    i = 0
-    while i < 5:
-        print(i)
-        i += 1
-    else:
-        print("Terminado.")
-
-## 2. Bucle for: Aplicando "for" en una lista de nombres y "else". 
-def p2():
-    names = ["Andres", "Pedro", "Juan"]
-    for name in names:
-        print(name)
-    else: 
-        print("Error.")
-
-## 3. Bucle for: Mostrar el indice y los elementos de la lista.
-def p3():
     casas = ["pequeña", "mediana", "grande"]
     for x, y in enumerate(casas):
         print(f"Slot [{x+1}]: {y}")
 
-## 4. Bucle for: Aplicando "for" en un diccionarios. 
+## 2. Bucle for: Aplicando "for" en un diccionarios usando "items", "keys" y "values". 
+def p2():
+    my_dict = {'Pato': 1, 'Gato': 2, 'Perro': 3}
+    for i, y in my_dict.items():
+        print(i, y)
+    print()
+
+    for i in my_dict.keys():
+        print(i)
+    print()
+
+    for i in my_dict.values():
+        print(i)
+    print()
+
+## 3. Bucle for: Aplicando "for" en una listas dentro de otra lista.
+def p3():
+    my_list = [[1, 2], [3, 4]]
+    for i in my_list:
+        for x in i:
+            print(x)
+
+## 4. Bucle for: Aplicando potencias a los elementos de una lista(1 linea para luego print).
 def p4():
-    fruits = {"Manzana": 1, "Pera": 9}
-    for fruit, amount in fruits.items():
-        print(f"Fruta: {fruit}; Cantidad: {amount}") 
-
-## 5. Bucle for: Aplicando "for" en una listas dentro de otra lista.
-def p5():
-    my_list = [[1, 2, 3], [4, 5, 6]]
-    for list_1 in my_list:
-        for list_2 in list_1:
-            print(list_2)
-
-## 6. Bucle for: Aplicando potencias a los elementos de una lista.
-def p6():
     list_num = [2, 4, 5]
     cuad = [i ** 2 for i in list_num]
     print(cuad)
 
 
-## 7. Bucle for: Uso del zip en 2 listas.
-def p7():
+## 5. Bucle for: Uso del zip en 2 listas.
+def p5():
     alumnos = ["Juan", "Pascual", "Ariel"]
     edades = [18, 13, 15]
     for alumno, edad in zip(alumnos, edades):
         print(f"Alumno: {alumno}; Edad: {edad}")
-
-## 8. Bucle for: Uso de range:
-def p8():
-    for i in range(4):
-        asd = i + 1
-        print(asd)
-
-## 9. Bucle for + condicional if: Uso de pass, continue y break.
-def p9():
-    for i in range(10):
-        if i == 5:
-            pass
-        elif i == 1:
-            continue
-        elif i == 8:
-            break
-        else:
-            print(f"Valor {i}.")

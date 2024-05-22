@@ -12,38 +12,26 @@ def p2():
     resultado = mi_lista.index("perro")
     print(resultado)
 
-## 3. Desempaquetado: 
+## 3. Funcion set:
 def p3():
-    elementos = (1, 2, 3)
-    a, b, c = elementos
-    print(c, b, a)
-
-## 4. Funcion reversed + tuple:
-def p4():
-    mi_lista = (1, 2, 3)
-    resultado = tuple(reversed(mi_lista))
-    print(resultado)
-
-## 5. Funcion set:
-def p5():
     mi_lista = (1, 1, 1, 1, 2, 3)
     resultado = set(mi_lista)
     print(resultado)
 
-## 6. Funcion len:
-def p6():
+## 4. Funcion len:
+def p4():
     mi_lista = (1, 1, 1, 1, 2, 3)
     resultado = len(mi_lista)
     print(resultado)
 
-## 7. Metodo count:
-def p7():
+## 5. Metodo count:
+def p5():
     mi_lista = (1, 1, 1, 1, 2, 3)
     resultado = mi_lista.count(1)
     print(resultado)
 
-## 8. Funcion sum, min y max:
-def p8():
+## 6. Funcion sum, min y max:
+def p6():
     mi_lista = [1, 2, 3]
     resultado_suma = sum(mi_lista)
     resultado_minimo = min(mi_lista)
@@ -52,7 +40,11 @@ def p8():
     print(resultado_minimo)
     print(resultado_maximo)
 
-
+## 7. Desempaquetado: 
+def p7():
+    elementos = (1, 2, 3)
+    a, b, c = elementos
+    print(c, b, a)
 
 
 

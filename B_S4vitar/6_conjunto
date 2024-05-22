@@ -1,88 +1,60 @@
 #!/usr/bin/env python3
-import time
-## 1. add: Agregar un elemento.
+
+## 1. remove: Quitar un elemento por su valor.
 def p1():
-    my_set = {1, 2, 3}
-    my_set.add(8)
-    print(my_set)
-
-## 2. update: Agregar varios elementos.
-def p2():
-    my_set = {1, 2, 3}
-    my_set.update({2, 4, 5, 8})
-    print(my_set)
-
-## 3. remove: Quitar un elemento por su valor.
-def p3():
     my_set = {1, 2, 3}
     my_set.remove(3)
     print(my_set)
 
-## 4. discard: Quitar un elemento por su valor y ademas evitando errores.
-def p4():
+## 2. discard: Quitar un elemento por su valor y ademas evitando errores.
+def p2():
     my_set = {1, 2, 3}
     my_set.discard(4)
     my_set.discard(3)
     print(my_set)
 
-## 5. intersection: Valores repetidos.
-def p5():
-    my_set_1 = {1, 2, 3, 4, 5}
-    my_set_2 = {1, 2, 4, 5}
-    repetidos = my_set_1.intersection(my_set_2)
-    print(repetidos)
+## 3. add: Agregar un elemento.
+def p3():
+    my_set = {1, 2, 3}
+    my_set.add(8)
+    print(my_set)
 
-## 6. Union: Unir 2 conjuntos quitando repetidos
-def p6():
+## 4. update: Agregar varios elementos.
+def p4():
+    my_set = {1, 2, 3}
+    my_set.update({2, 4, 5, 8})
+    print(my_set)
+
+## 5. Union: Unir 2 conjuntos quitando repetidos(No modifica directamente).
+def p5():
     my_set_1 = {1, 2, 3, 4, 5}
     my_set_2 = {1, 2, 4, 5}
     union = my_set_1.union(my_set_2)
     print(union)
 
-## 7. Issubset: ¿El primer conjunto(todos los valores) existe en el segundo conjunto?.
+## 6. intersection: Muestra los valores repetidos(1^ conjunto).
+def p6():
+    my_set_1 = {1, 2, 3}
+    my_set_2 = {3, 5, 6}
+    result = my_set_1.intersection(my_set_2)
+    print(result)
+
+## 7. difference: Muestra los valores no repetidos(1^ conjunto).
 def p7():
-    my_set_1 = {1, 2, 4}
-    my_set_2 = {"pato", 3, 2, 1}
+    my_set_1 = {1, 2, 3}
+    my_set_2 = {3, 5, 6}
+    result = my_set_1.difference(my_set_2)
+    print(result)
+
+## 8. Issubset: True or false. ¿Se repiten todos los valores?(1^ conjunto).
+def p8():
+    my_set_1 = {1, 2, 3}
+    my_set_2 = {1, 2, 3, 4}
     result = my_set_1.issubset(my_set_2)
     print(result)
 
-## 8. difference: Si todo de 1 esta en 2 no hay diferencia.
-def p8():
-    my_set_1 = {1, 2, 3, 4}
-    my_set_2 = {1, 2, 3}
-    diferencia = my_set_1.difference(my_set_2)
-    print(diferencia)
-
-## 9. Practice 1: Usando range itera en un conjunto(set) del 0 al 10000 y verifica si esta un valor.
+## 9. Clear:
 def p9():
-    my_set = set(range(10000))
-    print(12 in my_set) 
-
-## 10. Practice 2: Mostrar al usuario que esta en ambas plataformas y todos los usuario de ambas plataformas.
-def p10():
-    facebook = {"paco", "pancho", "pedro"}
-    twitter = {"pancho", "juan", "sancho"}
-    ambos = facebook.intersection(twitter)
-    todos = facebook.union(twitter)
-    
-    print(ambos)
-    print(todos)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    my_set_1 = {1, 2, 3}
+    my_set_1.clear()
+    print(my_set_1)
