@@ -32,29 +32,35 @@ def p5():
     union = my_set_1.union(my_set_2)
     print(union)
 
-## 6. intersection: Muestra los valores repetidos(1^ conjunto).
+## 6. Len:
 def p6():
+    my_set = {1, 2, 3}
+    result = len(my_set)
+    print(result)
+
+## 7. intersection: Muestra los valores repetidos(1^ conjunto).
+def p7():
     my_set_1 = {1, 2, 3}
     my_set_2 = {3, 5, 6}
     result = my_set_1.intersection(my_set_2)
     print(result)
 
-## 7. difference: Muestra los valores no repetidos(1^ conjunto).
-def p7():
+## 8. difference: Muestra los valores no repetidos(1^ conjunto).
+def p8():
     my_set_1 = {1, 2, 3}
     my_set_2 = {3, 5, 6}
     result = my_set_1.difference(my_set_2)
     print(result)
 
-## 8. Issubset: True or false. ¿Se repiten todos los valores?(1^ conjunto).
-def p8():
+## 9. Issubset: True or false. ¿Se repiten todos los valores?(1^ conjunto).
+def p9():
     my_set_1 = {1, 2, 3}
     my_set_2 = {1, 2, 3, 4}
     result = my_set_1.issubset(my_set_2)
     print(result)
 
-## 9. Clear:
-def p9():
+## 10. Clear:
+def p10():
     my_set_1 = {1, 2, 3}
     my_set_1.clear()
     print(my_set_1)

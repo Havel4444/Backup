@@ -35,20 +35,26 @@ def p6():
     my_dict["Manzana"] = 5
     print(my_dict)
 
-## 7. Len: Cuenta cada elemento.
+## 7. Renombrar.
 def p7():
+    my_dict = {"Manzana": 3, "Pera": 2}
+    my_dict["Zanahoria"] = my_dict.pop("Manzana")
+    print(my_dict)
+
+## 8. Len: Cuenta cada elemento.
+def p8():
     my_dictionary = {"Pera": 9, "Manzana": 4, "Zandia": 7}
     longitud = len(my_dictionary)
     print(longitud)
 
-## 8. Get: Buscar el valor de la clave pero en caso contrario hacer lo siguiente.
-def p8():
+## 9. Get: Buscar el valor de la clave pero en caso contrario hacer lo siguiente.
+def p9():
     my_dictionary = {"Pera": 9, "Manzana": 4, "Zandia": 7}
     busqueda = my_dictionary.get("Limon", "No encontrado.")
     print(busqueda)
 
-## 9. Clear: 
-def p9():
+## 10. Clear: 
+def p10():
     my_dictionary = {"Pera": 9, "Manzana": 4, "Zandia": 7}
     my_dictionary.clear()
     print(my_dictionary)
