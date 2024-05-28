@@ -20,106 +20,89 @@ def p1():
     print(diego.saludo())
     print(roberto.saludo())
 
-## 2. Clase y objeto: Estado de una cuenta + agregar y retirar dinero.
+
+## 2. @Property: Calcular el area de un triangulo.
+# Decorador que permite que la funcion actue como un atributo vinculado a la clase.
+
 def p2():
-    class Banco: 
-        def __init__(self, nombre, dni, cuenta, dinero):
-            self.cuenta = cuenta
-            self.nombre = nombre
-            self.dni = dni
-            self.dinero = dinero
+    class Triangle:
+        def __init__(self, base, height):
+            self.base = base
+            self.height = height
 
-        def plata(self):
-            return f"[#][{self.nombre}] Cuenta: ${self.dinero}."
+        @property 
+        def calculation_1(self):
+            return self.base * self.height // 2
 
-        def deposito(self, money):
-            self.dinero += money
-            return f"[+][{self.nombre}] Depositado: ${money}; Cuenta actual: ${self.dinero}."
 
-        def retirar(self, yenom):
-            if yenom > self.dinero:
-                return f"[!][{self.nombre}] Denegado. El valor ${yenom} excede tu cuenta: ${self.dinero}."
-            else:
-                self.dinero -= yenom 
-                return f"[+][{self.nombre}] Retirado: ${yenom}; Restante: ${self.dinero}."
+    triangle_obj = Triangle(4, 5)
+    print(f"\n[#] Base por altura = {triangle_obj.calculation_1}")
 
-    marcelo = Banco("Marcelo", 42440777, 12345678910, 1000)
-    
-    print(marcelo.plata())
-    print(marcelo.deposito(2896))
-    print(marcelo.retirar(4000))
+## 3. __str__: Descripcion del objeto.
+# Metodo que vinculada la funcion __str__ al objeto.
 
-## 3. b*h/2: Conseguir el area de una figura; Usar @property + objeto.
 def p3():
-    class Area:
-        def __init__(self, base, altura):
-            self.base = base 
-            self.altura = altura 
+    class Triangle:
+        def __init__(self, base, height):
+            self.base = base
+            self.height = height
 
-        def area_triangulo(self):
-            calculo = self.base * self.altura // 2
-            return f"\n[+] Area del triangulo: {calculo}"            
+        def __str__(self):
+            return f"\n[#] Base: {self.base}; Altura: {self.height}"
 
-    triangulo = Area(8, 4)
-    print(triangulo.area_triangulo)
+    triangle_obj = Triangle(4, 5)
+    print(triangle_obj)
 
-## 4. __str__: Usar @property en un objeto.
-def p4():
-    class Area:
-        def __init__(self, base, altura):
-            self.base = base 
-            self.altura = altura 
+## 5. __eq__: Booleano para determinar si el area y altura de 2 triangulos son iguales.
+# Metodo que verifica la igualidad entre objetos.
 
-        @property # Forzar a ejecutar el metodo sin parentesis.
-        def area_triangulo(self):
-            calculo = self.base * self.altura // 2
-            return f"\n[+] Area del triangulo: {calculo}"            
-
-        def __str__(self): # C. para mostrar los valores del objeto.
-            return f"\n[#] Base: {self.base}; Altura: {self.altura}"
-
-    triangulo = Area(8, 4)
-    print(triangulo)
-
-## 5. __eq__: 
 def p5():
-    class Area:
-        def __init__(self, base, altura):
-            self.base = base 
-            self.altura = altura 
-        
-        def area_triangulo(self):
-            calculo = self.base * self.altura // 2
-            return f"\n[+] Area del triangulo: {calculo}"            
+    class Triangle:
+        def __init__(self, base, height):
+            self.base = base
+            self.height = height
 
-        def __eq__(self, otro):
-            return self.base == otro.base and self.altura == otro.altura
+        def __eq__(self, other):
+            return self.base == other.base and self.height == other.height
 
-    triangulo_1 = Area(4, 4)
-    triangulo_2 = Area(8, 4)
-    print(triangulo_1.area_triangulo())
-    print(triangulo_2.area_triangulo())
-    print(f"\n¿Son iguales?: {triangulo_1 == triangulo_2}")
+    triangle_obj_1 = Triangle(3, 5)
+    triangle_obj_2 = Triangle(4, 5)
+    print(f"\n[#] ¿Es igual? -> {triangle_obj_1 == triangle_obj_2}")
 
-## 6. Staticmethod:
+
+## 6. @staticmethod: Usando un numero, variable y una instancia para obtener al juego GOTY. 
+#
 def p6():
-    class Auto:
-        valor = 15654
+    class Triangle:
+        goty = 7 
 
-        def __init__(self, marca, modelo, costo):
-            self.marca = marca
-            self.modelo = modelo
-            self.costo = costo
+        def __init__(self, base, height, best=7):
+            self.base = base
+            self.height = height
+            self.best = best
 
-        @staticmethod # Decorador.
-        def ahorrado(disponible):
-            # Devuelve un valor booleano.
-            #return f"{disponible > Auto.valor}: Puedes comprarlo."
-            return "Puedes comprarlo." if disponible > Auto.valor else "No puedes comprarlo." 
+        @staticmethod # Opcion usando directamente un numero.
+        def game_1(review):
+            return review > 7
+    
+        @staticmethod # Opcion usando la variable "goty".
+        def game_2(review):
+            return review > Triangle.goty
 
-    cuenta_bancaria = Auto("Renault", "Alaskan", 15654)
+        @staticmethod # Opcion usando una instancia + cambio de codigo para retornar.
+        def game_3(instancia, review):
+            return review > instancia.best
 
-    print(Auto.ahorrado(16000))
+    triangle_obj_1 = Triangle(3, 5)
+    print(f"\n[#] 1.¿GOTY? -> {Triangle.game_1(9)}")
+    print(f"\n[#] 2.¿GOTY? -> {Triangle.game_2(9)}")
+    print(f"\n[#] 3.¿GOTY? -> {Triangle.game_3(triangle_obj_1, 9)}")
+
+
+
+
+
+
 
 
 

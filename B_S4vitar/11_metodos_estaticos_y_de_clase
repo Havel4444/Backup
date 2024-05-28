@@ -1,0 +1,70 @@
+#!/usr/bin/env python3
+
+## 1. @staticmethod: Usando un numero, variable y una instancia para obtener al juego GOTY. 
+#
+def p1():
+    class Triangle:
+        goty = 7 
+
+        def __init__(self, base, height, best=7):
+            self.base = base
+            self.height = height
+            self.best = best
+
+        @staticmethod # Opcion usando directamente un numero.
+        def game_1(review):
+            return review > 7
+    
+        @staticmethod # Opcion usando la variable "goty".
+        def game_2(review):
+            return review > Triangle.goty
+
+        @staticmethod # Opcion usando una instancia + cambio de codigo para retornar.
+        def game_3(instancia, review):
+            return review > instancia.best
+
+    triangle_obj_1 = Triangle(3, 5)
+    print(f"\n[#] 1.¿GOTY? -> {Triangle.game_1(9)}")
+    print(f"\n[#] 2.¿GOTY? -> {Triangle.game_2(9)}")
+    print(f"\n[#] 3.¿GOTY? -> {Triangle.game_3(triangle_obj_1, 9)}")
+
+## 2. @staticmethod:
+#
+
+def p2():
+    class Calculator:
+
+        @staticmethod
+        def sum(num1, num2):
+            return num1 + num2
+
+        @staticmethod
+        def minus(num1, num2):
+            return num1 - num2 
+
+        @staticmethod
+        def division(num1, num2):
+            return num1 // num2 if num2 != 0 else f"\n[!] Error: No es posible dividir entre 0."
+
+        @staticmethod
+        def multiplication(num1, num2):
+            return num1 * num2
+
+    print(f"\n[#] Suma: {Calculator.sum(5, 4)}.")
+    print(f"\n[#] Resta: {Calculator.minus(5, 4)}.")
+    print(f"\n[#] Division: {Calculator.division(10, 5)}.")
+    print(f"\n[#] multiplication: {Calculator.multiplication(10, 5)}.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
