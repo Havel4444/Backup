@@ -55,7 +55,63 @@ def p2():
     print(f"\n[#] Division: {Calculator.division(10, 5)}.")
     print(f"\n[#] multiplication: {Calculator.multiplication(10, 5)}.")
 
+def p3():
+    class Automovil:
+        def __init__(self, marca, modelo):
+            self.marca =  marca
+            self.modelo = modelo
 
+        @classmethod 
+        def deportivos(cls, marca):
+            return cls(marca, "Deportivo")
+
+        @classmethod 
+        def clasicos(cls, marca):
+            return cls(marca, "Deportivo")
+
+        def __str__(self):
+            return f"\n[#] Marca: {self.marca}; Modelo: {self.modelo}."
+        
+    objeto_1 = Automovil.deportivos("Ferrari")
+    print(objeto_1)
+
+    objeto_2 = Automovil.clasicos("Mustang")
+    print(objeto_2)
+
+def p4():
+    class Estudiantes:
+
+        estudiantes = []
+
+        def __init__(self, nombre, edad):
+            self.nombre = nombre
+            self.edad = edad
+
+            Estudiantes.estudiantes.append(self)
+        
+        @staticmethod
+        def es_mayor_de_edad(edad):
+            return edad >= 18
+
+        @classmethod
+        def crear_estudiantes(cls, nombre, edad):
+            if cls.es_mayor_de_edad(edad):
+                return cls(nombre, edad)
+            else:
+                print(f"\n[!] El estudiante {nombre} es menor edad.")
+        
+        @staticmethod
+        def mostrar_estudiantes():
+            print(f"\n[#] Estudiantes mayores de edad:.\n")
+            for i, alumnos in enumerate(Estudiantes.estudiantes):
+                print(f"\t[{i}] {alumnos.nombre}.")
+
+    Estudiantes.crear_estudiantes("Hackermate", 43)
+    Estudiantes.crear_estudiantes("S4vitar", 28)
+    Estudiantes.crear_estudiantes("Xerosec", 12)
+    Estudiantes.crear_estudiantes("Hackavis", 8)
+
+    Estudiantes.mostrar_estudiantes()
 
 
 
