@@ -30,7 +30,6 @@ def p1():
 
 ## 2. @staticmethod:
 #
-
 def p2():
     class Calculator:
 
@@ -112,15 +111,3 @@ def p4():
     Estudiantes.crear_estudiantes("Hackavis", 8)
 
     Estudiantes.mostrar_estudiantes()
-
-
-
-
-
-
-
-
-
-
-
-
