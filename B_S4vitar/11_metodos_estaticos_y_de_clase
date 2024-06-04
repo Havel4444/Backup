@@ -115,3 +115,152 @@ def p4():
     Estudiantes.crear_estudiantes("Hackavis", 8)
 
     Estudiantes.mostrar_estudiantes()
+
+##########################################################################################
+##########################################################################################
+##########################################################################################
+##########################################################################################
+##########################################################################################
+##########################################################################################
+##########################################################################################
+##########################################################################################
+## 1. 
+def p1():
+    class Game:
+
+        num = 8
+
+        def __init__(self, best=8):
+            self.best = best
+    
+        @staticmethod
+        def goty_1(game):
+            return game >= 8
+
+        @staticmethod
+        def goty_2(game):
+            return game >= Game.num
+
+        def goty_3(self, game):
+            return game >= self.best
+
+    print(f"\n[1] ¿Goty? -> {Game.goty_1(10)}")
+    print(f"\n[2] ¿Goty? -> {Game.goty_2(10)}")
+    print(f"\n[3] ¿Goty? -> {Game().goty_3(10)}")
+    
+## 2.
+def p2():
+    class Calculator:
+
+        @staticmethod
+        def sum(num1, num2):
+            return num1 + num2
+
+        @staticmethod
+        def minus(num1, num2):
+            return num1 - num2
+
+        @staticmethod
+        def division(num1, num2):
+            return num1 // num2
+
+        @staticmethod
+        def multiplication(num1, num2):
+            return num1 * num2
+
+    print(f"\n[#] Suma: {Calculator.sum(5, 4)}")
+    print(f"\n[#] Resta: {Calculator.minus(5, 4)}")
+    print(f"\n[#] Division: {Calculator.division(5, 4)}")
+    print(f"\n[#] Multiplication: {Calculator.multiplication(5, 4)}")
+
+## 3.
+def p3():
+    class Auto:
+        def __init__(self, brand, model):
+            self.brand = brand 
+            self.model = model
+       
+        @classmethod
+        def sports(cls, brand):
+            return cls(brand, "GT12")
+
+        @classmethod
+        def classics(cls):
+            return cls("Ford", "T88")
+        
+        def __str__(self):
+            return f"\n[#] Auto: Marca {self.brand}; Modelo: {self.model}."
+
+    Auto_1 = print(Auto.sports("Ferrari"))
+    Auto_2 = print(Auto.classics())
+
+## 4.
+def p4():
+    class School:
+        
+        valid_age = 18
+        students = []
+
+        def __init__(self, name, age):
+            self.name = name
+            self.age = age
+
+            School.students.append(self)
+
+        @staticmethod
+        def check(age):
+            return age >= School.valid_age 
+
+        @classmethod
+        def learner(cls, name, age):
+            if cls.check(age):
+                return cls(name, age)
+            else:
+                print(f"\n[!] Estudiante menor de edad:")
+                print(f"\t[#] {name} de {age} años.")
+
+        @staticmethod
+        def show():
+            print(f"\n[+] Estudiantes mayores de edad:")
+            for i, student in enumerate(School.students):
+                print(f"\t[{i+1}] {student.name} de {student.age} años.")
+
+    School.learner("Juan", 12)
+    School.learner("Roman", 15)
+    School.learner("Pancho", 42)
+    School.learner("Fabricio", 55)
+
+    School.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
