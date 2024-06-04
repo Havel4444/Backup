@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-## 1. @staticmethod: Usando un numero, variable y una instancia para obtener al juego GOTY. 
+## 1. @staticmethod: Juego goty mayor o igual a 8.
 #
 def p1():
     class Triangle:
@@ -28,7 +28,7 @@ def p1():
     print(f"\n[#] 2.¿GOTY? -> {Triangle.game_2(9)}")
     print(f"\n[#] 3.¿GOTY? -> {Triangle.game_3(triangle_obj_1, 9)}")
 
-## 2. @staticmethod:
+## 2. @staticmethod: calculadora con funciones
 #
 def p2():
     class Calculator:
@@ -54,6 +54,8 @@ def p2():
     print(f"\n[#] Division: {Calculator.division(10, 5)}.")
     print(f"\n[#] multiplication: {Calculator.multiplication(10, 5)}.")
 
+## 3. __str__: auto deportivo y auto clasico.
+#
 def p3():
     class Automovil:
         def __init__(self, marca, modelo):
@@ -77,6 +79,8 @@ def p3():
     objeto_2 = Automovil.clasicos("Mustang")
     print(objeto_2)
 
+## 3. classmethod: El estudiante es mayor de edad o menor?
+#
 def p4():
     class Estudiantes:
 
