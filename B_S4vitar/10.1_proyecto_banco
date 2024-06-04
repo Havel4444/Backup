@@ -7,108 +7,117 @@ clear_screen = lambda: os.system("clear")
 
 class Bank:
     def __init__(self, id, name, balance):
-        self.id = id
+        self.id = id 
         self.name = name
         self.balance = balance
 
     def state(self):
         clear_screen()
-        print(f"\n[#] --- MENU: ESTADO --- [#]\n")
+        print(f"\n[#] --- ESTADO --- [#]\n")
         print(f"[#] ID: {self.id}")
         print(f"[#] Nombre: {self.name}")
-        print(f"[#] Saldo: {self.balance}\n")
-    def deposit(self, add):
+        print(f"[#] Saldo: ${self.balance}\n")
+
+    def deposit(self, insert):
         clear_screen()
-        self.balance += add
-        print(f"\n[#] --- MENU: DEPOSITAR --- [#]\n") 
-        print(f"[#] Monto depositado: {add}.") 
-        print(f"[#] Monto actual: {self.balance}.\n") 
+        self.balance += insert
+        print(f"\n[#] --- DEPOSITADO --- [#]\n")
+        print(f"[#] Saldo ingresado: ${insert}.")
+        print(f"[#] Saldo actual: ${self.balance}.\n")
+
     def withdraw(self, remove):
         if remove > self.balance:
             clear_screen()
-            print(f"\n[#] --- MENU: ERROR --- [#]\n") 
-            print(f"[#] Monto denegado: {remove}.") 
-            print(f"[#] Monto actual: {self.balance}.\n") 
-            show_error_menu()
-            input_error_menu()
+            print(f"\n[#] --- DENEGADO --- [#]\n")
+            print(f"[#] Saldo rechazado: ${remove}.")
+            print(f"[#] Saldo actual: ${self.balance}.\n")
+            denied_menu_function()
         else:
             clear_screen()
-            self.balance -= remove 
-            print(f"\n[#] --- MENU: RETIRAR --- [#]\n") 
-            print(f"[#] Monto retirado: {remove}.") 
-            print(f"[#] Monto actual: {self.balance}.\n") 
+            self.balance -= remove
+            print(f"\n[#] --- RETIRADO --- [#]\n")
+            print(f"[#] Saldo extraido: ${remove}.")
+            print(f"[#] Saldo actual: ${self.balance}.\n")
 
-bank_obj = Bank(1234, "Juan Perez", 10000)
+thing = Bank(1234, "Juan", 1000)
 
 def show_main_menu():
     clear_screen()
     print(f"\n[#] --- MENU --- [#]\n")
-    print("[*] 1. Estado.")
-    print("[*] 2. Depositar.")
-    print("[*] 3. Retirar.")
-    print(f"[*] 4. Salir.\n")
+    print(f"[*] 1) Estado.")
+    print(f"[*] 2) Depositar.")
+    print(f"[*] 3) Retirar.")
+    print(f"[*] 4) Salir.\n")
 
-def show_give_menu():
+def show_deposit_menu():
     clear_screen()
-    print(f"\n[#] --- MENU: OPERACION --- [#]\n")
-    print("[*] ¿Cuando va a depositar?.\n")
+    print(f"\n[#] --- OPERACION: DEPOSITAR --- [#]\n")
+    print(f"[#] Monto a depositar:\n")
 
-def show_grab_menu():
+def show_withdraw_menu():
     clear_screen()
-    print(f"\n[#] --- MENU: OPERACION --- [#]\n")
-    print("[*] ¿Cuando va a retirar?.\n")
-
-def show_error_menu():
-    print(f"\n[*] 1. Volver a intentar.")
-    print(f"[*] 2. Salir.\n")
+    print(f"\n[#] --- OPERACION: RETIRAR --- [#]\n")
+    print(f"[#] Monto a retirar:\n")
 
 def show_again_menu():
-    print(f"\n[*] 1. Volver.")
-    print(f"[*] 2. Salir.\n")
+    print(f"\n[*] 1) Volver al menu.")
+    print(f"[*] 2) Salir.\n")
+
+def show_denied_munu():
+    print(f"\n[*] 1) Volver a intertar.")
+    print(f"[*] 2) Volver al menu.")
+    print(f"[*] 3) Salir.\n")
+
+def input_main_menu():
+    key = int(input("[*]: "))
+    if key == 1:
+        state_function()
+        again_menu_function()
+    elif key == 2:
+        deposit_function() 
+        again_menu_function()
+    elif key == 3:
+        withdraw_function() 
+        again_menu_function()
+    elif key == 4:
+        sys.exit()
 
 def input_again_menu():
-    key = int(input("[#]: "))
+    key = int(input("[*]: "))
     if key == 1:
         main()
     elif key == 2:
         sys.exit()
 
-def input_main_menu():
-    key = int(input("[#]: "))
+def input_denied_menu():
+    key = int(input("[*]: "))
     if key == 1:
-        account()
-        show_again_menu()
-        input_again_menu()
+        withdraw_function()
     elif key == 2:
-        give()
-        show_again_menu()
-        input_again_menu()
+        main()
     elif key == 3:
-        grab()
-        show_again_menu()
-        input_again_menu()
-    elif key == 4:
         sys.exit()
 
-def input_error_menu():
-    key = int(input("[#]: "))
-    if key == 1:
-        grab()
-    elif key == 2:
-        sys.exit()
+def again_menu_function():
+    show_again_menu()
+    input_again_menu()
 
-def account():
-    bank_obj.state()
+def denied_menu_function():
+    show_denied_munu()
+    input_denied_menu()
 
-def give():
-    show_give_menu()
-    key = int(input("[#]: "))
-    bank_obj.deposit(key)
+def state_function():
+    thing.state()
 
-def grab():
-    show_grab_menu()
-    key = int(input("[#]: "))
-    bank_obj.withdraw(key)
+def deposit_function():
+    show_deposit_menu()
+    key = int(input("[*]: "))
+    thing.deposit(key)
+
+def withdraw_function():
+    show_withdraw_menu()
+    key = int(input("[*]: "))
+    thing.withdraw(key)
 
 def main():
     while True:
