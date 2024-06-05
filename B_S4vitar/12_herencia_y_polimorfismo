@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+
+# 1. Herencia: 2 clases heredadas para determinar el atributo principal del rol.
+def p1():
+    class Atributo_principal:
+        def __init__(self, atributo):
+            self.atributo = atributo
+
+        def categoria(self):
+            raise NotImplementedError("ERROR")
+
+    class Tanque(Atributo_principal):
+        def categoria(self):
+            print(f"\n[#] El offliner es de atributo {self.atributo}.")
+
+
+    class Asesino(Atributo_principal):
+        def categoria(self):
+            print(f"\n[#] El carry es de atributo {self.atributo}.")
+
+
+    offliner = Tanque("Fuerza")
+    carry = Asesino("Agilidad")
+    random = Atributo_principal("Agilidad")
+
+    offliner.categoria()
+    carry.categoria()
+
+# 2. Polimorfismo: Sin herencia, politica de mexico y argentina con 2 "def" fuera de la unica clase.
+def p2():
+    class Gobierno:
+        def __init__(self, pais):
+            self.pais = pais 
+        
+        @staticmethod
+        def orientacion_izquierda():
+            return "mas impuestos."
+
+        @staticmethod
+        def orientacion_derecha():
+            return "menos impuestos."
+
+    izquierda = Gobierno("Mexico") 
+    derecha = Gobierno("Argentina")
+
+    def puntos_de_vista_1(thing):
+        print(f"\n[#] El gobierno de {thing.pais} prefiere {Gobierno.orientacion_izquierda()}")
+
+    def puntos_de_vista_2(thing):
+        print(f"\n[#] El gobierno de {thing.pais} prefiere {Gobierno.orientacion_derecha()}")
+
+    puntos_de_vista_1(izquierda) 
+    puntos_de_vista_2(derecha) 
+
+# 3. Polimorfismo: Con herencia, politica de mexico y argentina.
+def p3():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
