@@ -54,16 +54,45 @@ def p2():
 
 # 3. Polimorfismo: Con herencia, politica de mexico y argentina.
 def p3():
+    class Gobierno:
+        def __init__(self, pais):
+            self.pais = pais 
+    
+    class Socialista(Gobierno):
+        def orientacion_izquierda(self):
+            return "mas impuestos."
 
+    class Capitalista(Gobierno):
+        def orientacion_derecha(self):
+            return "menos impuestos."
 
+    izquierda = Socialista("Mexico") 
+    derecha = Capitalista("Argentina")
 
+    def puntos_de_vista_1(thing):
+        print(f"\n[#] El gobierno de {thing.pais} prefiere {thing.orientacion_izquierda()}")
 
+    def puntos_de_vista_2(thing):
+        print(f"\n[#] El gobierno de {thing.pais} prefiere {thing.orientacion_derecha()}")
 
+    puntos_de_vista_1(izquierda)
+    puntos_de_vista_2(derecha)
 
+# 4. Herencia: super().
+def p4():
+    class A:
+        def __init__(self):
+            print(f"\n[#] Inicializando: A")
 
+    class B(A):
+        def __init__(self):
+            print(f"\n[#] Inicializando: B")
+            super().__init__()
 
+    b = B()
 
-
+# 5. : .
+def p5():
 
 
 

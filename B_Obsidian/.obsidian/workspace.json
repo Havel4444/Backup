@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chest/Courses/Folder_python/index_python.md",
+                "file": "listas.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chest/Courses/Folder_python/index_python.md",
+                "file": "listas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chest/Courses/Folder_python/index_python.md",
+                "file": "listas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chest/Courses/Folder_python/index_python.md"
+                "file": "listas.md"
               }
             }
           }
@@ -164,8 +164,8 @@
   },
   "active": "5d30d4e307679f94",
   "lastOpenFiles": [
-    "funciones y ambito de variable.md",
     "Chest/Courses/Folder_python/index_python.md",
+    "funciones y ambito de variable.md",
     "Chest/Courses/index.md",
     "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
     "conjuntos.md",

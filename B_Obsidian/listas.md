@@ -112,6 +112,21 @@ a, b, c = mi_lista
 print(a, b, c)
 ```
 
+.JOIN:
+- Quitar los parentecis y comillas de un valor.
+```python
+class Tienda:
+    def __init__(self, *items):
+        self.items = items 
+
+    def __str__(self):
+        # Convertir la tupla de items a una cadena sin paréntesis ni comillas
+        items_str = ', '.join(self.items)
+        return f"\n[#] Fruta: {items_str}"
+
+caja = Tienda("Manzana", "Platano", "Kiwi", "Pera")
+print(caja)
+```
 
 
 # SCRIPT
