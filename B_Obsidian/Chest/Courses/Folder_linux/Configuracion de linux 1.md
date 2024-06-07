@@ -622,6 +622,20 @@ Paso a paso:
    ```
 - Esto debería permitir que `os-prober` busque otros sistemas operativos instalados en tu sistema, incluido Windows, y los agregue al menú GRUB. Después de realizar estos pasos, reinicia tu computadora y verifica si ahora ves la opción para iniciar Windows en el menú GRUB.
 
+# MONTAR
+
+###### Instalar ntfs-3g (si no está ya instalado)
+sudo apt update
+sudo apt install ntfs-3g
+###### Crear un punto de montaje
+sudo mkdir /mnt/sdb2
+###### Montar la partición usando ntfs-3g
+sudo mount -t ntfs-3g /dev/sdb2 /mnt/sdb2
+###### Acceder al contenido de la partición
+cd /mnt/sdb2
+ls
+###### Desmontar la partición cuando termines
+sudo umount /mnt/sdb2
 
 
 

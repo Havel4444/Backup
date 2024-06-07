@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "listas.md",
+                "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#Fondo",
+                "query": "grub",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "listas.md",
+                "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "listas.md",
+                "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "listas.md"
+                "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md"
               }
             }
           }
@@ -164,13 +164,13 @@
   },
   "active": "5d30d4e307679f94",
   "lastOpenFiles": [
+    "listas.md",
     "Chest/Courses/Folder_python/index_python.md",
     "funciones y ambito de variable.md",
     "Chest/Courses/index.md",
     "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
     "conjuntos.md",
     "tuplas.md",
-    "listas.md",
     "Chest/Courses/Folder_linux/S4vitar coleccion find and grep.md",
     "Chest/Courses/Folder_python/variables y tipos de datos en python.md",
     "Chest/Courses/Folder_python/shebang y convenios.md",

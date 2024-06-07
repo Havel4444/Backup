@@ -100,11 +100,40 @@ def p6():
 ## 7.
 def p7():
     class Punto:
+        def __init__(self, x, y):
+            self.x = x
+            self.y = y
 
-    punto_1 = Punto(2, 4)
-    punto_2 = Punto(5, 3)
+        def __add__(self, otro):
+            return Punto(self.x + otro.x, self.y + otro.y)
+
+        def __str__(self):
+            return f"({self.x}, {self.y})"
+
+    punto_1 = Punto(2, 3)
+    punto_2 = Punto(4, 6)
+    punto_3 = Punto(10, 5)
+
+    print(punto_1 + punto_2 + punto_3)
 
 ## 8.
 def p8():
-    pass
+    class Contador:
+        def __init__(self, limite):
+            self.limite = limite
 
+        def __iter__(self):
+            self.contador = 0 
+
+            return self
+
+        def __next__(self):
+            if self.contador < self.limite:
+                self.contador += 1
+                return self.contador
+            else: 
+                raise StopIteration
+
+    c = Contador(5)
+    for i in c:
+        print(i)

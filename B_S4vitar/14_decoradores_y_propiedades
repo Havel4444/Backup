@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+
+## 1. 
+def p1():
+    def my_list(function):
+        def envelope():
+            print(f"\n[A] 1, 2, y 3.")
+            function()
+            print(f"\n[C] 7, 8, y 9.")
+        return envelope
+
+    @my_list
+    def list_1():
+        print(f"\n[B] 4, 5, y 6.")
+
+    list_1()
+
+## 2.
+def p2():
+    class Persona:
+        def __init__(self, name, age):
+            self._name = name
+            self._age = age
+
+        @property # getter
+        def age(self):
+            return self._age
+
+        @age.setter # setter
+        def age(self, value):
+            if value > 0:
+                self._age = value
+            else:
+                raise ValueError("[!] La edad no puedo ser 0 o un numero negativo.")
+
+    manolo = Persona("Manolo", 28)
+    manolo.age = 12 # setter
+    print(manolo.age) # getter
+## 3.
+def p3():
+    pass
+
+## 4.
+def p4():
+    pass
+
+## 5.
+def p5():
+    pass
+
+## 6.
+def p6():
+    pass
+
+## 7.
+def p7():
+    pass
+
+## 8.
+def p8():
+    pass
+
