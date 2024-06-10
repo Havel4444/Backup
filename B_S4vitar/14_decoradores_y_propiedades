@@ -1,41 +1,49 @@
 #!/usr/bin/env python3
 
-## 1. 
+## 1. Decorador: Envoltorio. Realizar 1 tarea antes y despues de llamar a la funcion principal.
+# Orden superior con envoltorio como funcion.
 def p1():
-    def my_list(function):
-        def envelope():
-            print(f"\n[A] 1, 2, y 3.")
-            function()
-            print(f"\n[C] 7, 8, y 9.")
-        return envelope
+    def filas(nums_1):
+        def envoltorio():
+            print("1, 2")
+            nums_1()
+            print("5, 6")
+        return envoltorio
 
-    @my_list
-    def list_1():
-        print(f"\n[B] 4, 5, y 6.")
+    @filas
+    def segunda_lista():
+        print("3, 4")
 
-    list_1()
+    segunda_lista()
 
-## 2.
+## 2. Decorador: Getter y Setter. Definir si las ganancias de una tienda tienen Superavit o Deficit con 1 conficional. 
+# Cambiar el tipo de valor y el valor de una instacia.
 def p2():
-    class Persona:
-        def __init__(self, name, age):
-            self._name = name
-            self._age = age
+    class Tienda:
+        def __init__(self, ganancia):
+            self._ganancia = ganancia
 
-        @property # getter
-        def age(self):
-            return self._age
+        # Getter: 
+        @property
+        def ganancia(self):
+            return self._ganancia
 
-        @age.setter # setter
-        def age(self, value):
-            if value > 0:
-                self._age = value
+        # Setter:
+        @ganancia.setter
+        def ganancia(self, value):
+            if isinstance(value, int):
+                if value > 1000:
+                    self._ganancia = "Superavit"
+                else:
+                    self._ganancia = "Deficit"
             else:
-                raise ValueError("[!] La edad no puedo ser 0 o un numero negativo.")
+                raise ValueError(f"\n\t[!] Valor no entero y/o string.")
 
-    manolo = Persona("Manolo", 28)
-    manolo.age = 12 # setter
-    print(manolo.age) # getter
+    data = Tienda("None")
+
+    data.ganancia = 1399
+    print(data.ganancia)
+
 ## 3.
 def p3():
     pass
