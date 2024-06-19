@@ -32,9 +32,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5fee4c82188f5200",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.3"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -162,7 +172,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5d30d4e307679f94",
+  "active": "5fee4c82188f5200",
   "lastOpenFiles": [
     "listas.md",
     "Chest/Courses/Folder_python/index_python.md",
