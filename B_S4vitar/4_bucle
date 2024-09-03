@@ -28,7 +28,7 @@ def p3():
         for x in i:
             print(x)
 
-## 4. Bucle for: Aplicando potencias a los elementos de una lista(1 linea para luego print).
+## 2. Bucle for: Aplicando potencias a los elementos de una lista(1 linea para luego print).
 def p4():
     list_num = [2, 4, 5]
     cuad = [i ** 2 for i in list_num]
