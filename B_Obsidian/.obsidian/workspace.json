@@ -18,7 +18,9 @@
                 "mode": "source",
                 "source": false
               },
-              "pinned": true
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "index"
             }
           },
           {
@@ -30,17 +32,23 @@
                 "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Configuracion de linux 1"
             }
           },
           {
-            "id": "5fee4c82188f5200",
+            "id": "2bf762e06ded53f4",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.6.3"
-              }
+                "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Configuracion de linux 1"
             }
           }
         ],
@@ -64,7 +72,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -73,13 +83,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "grub",
+                "query": ".deb",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -87,7 +99,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ],
@@ -119,7 +133,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Configuracion de linux 1"
             }
           },
           {
@@ -131,7 +147,9 @@
                 "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Configuracion de linux 1"
             }
           },
           {
@@ -142,7 +160,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -152,7 +172,9 @@
               "type": "outline",
               "state": {
                 "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md"
-              }
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Configuracion de linux 1"
             }
           }
         ]
@@ -172,13 +194,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5fee4c82188f5200",
+  "active": "2bf762e06ded53f4",
   "lastOpenFiles": [
+    "Chest/Courses/Folder_linux/Nestor clase 3 explorando el contenido de nuestros archivos.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 6 asignacion y creacion de permisos.md",
+    "Chest/Courses/Folder_linux/index_linux.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 5 lectura e interpretacin de permisos.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 4 descriptores de archivos.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 3 introduccion a linux 3.md",
+    "Chest/Courses/Folder_linux/S4vitar clase 2 introduccion a linux 2.md",
+    "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
     "listas.md",
     "Chest/Courses/Folder_python/index_python.md",
     "funciones y ambito de variable.md",
     "Chest/Courses/index.md",
-    "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
     "conjuntos.md",
     "tuplas.md",
     "Chest/Courses/Folder_linux/S4vitar coleccion find and grep.md",
@@ -190,7 +219,6 @@
     "Chest/Courses/Folder_c++",
     "Chest/Courses/Folder_c++/index_c++.md",
     "Chest/Courses/Folder_c++/variables y tipos de datos en c++.md",
-    "Chest/Courses/Folder_linux/index_linux.md",
     "Chest/Courses/Folder_linux/Fundamentos de linux comandos.md",
     "Chest/Courses/Folder_linux/funciones.md",
     "Chest/Courses/Folder_linux/bash.md",
@@ -200,12 +228,6 @@
     "123asldkfja",
     "Chest/Courses/Folder_linux/S4vitar script de busqueda.md",
     "Chest/Courses/Folder_python",
-    "Chest/Courses/Folder_linux/S4vitar clase 7 permisos especiales.md",
-    "Chest/Courses/Folder_linux/S4vitar clase 2 introduccion a linux 2.md",
-    "Chest/Courses/Folder_sheets/index_sheets.md",
-    "Chest/Courses/Folder_linux/S4vitar conexion ssh.md",
-    "Chest/Courses/Folder_linux/S4vitar clase 10 script en bash.md",
-    "Chest/Courses/Folder_linux/S4vitar clase 8 directorios.md",
     "S4vitar clase 8 asignacion de permisos 1",
     "DEMO"
   ]
