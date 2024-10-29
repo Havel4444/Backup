@@ -461,7 +461,7 @@ sudo apt-get install -f
 
 **tar.xz:**
 ```
-tar -xJvf nombre-del-archivo.tar.xz
+	tar -xJvf nombre-del-archivo.tar.xz
 tar -xJvf 
 ```
 

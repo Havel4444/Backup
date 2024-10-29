@@ -1,7 +1,7 @@
 [[index]]
 [[index_linux]]
 
-# COMANDOS
+# COMANDOS BASICOS
 #### ARCHIVO .SH
 
 **Shebang**:
@@ -12,18 +12,3 @@ echo "Hola mundo"
 ``` 
  - En caso de no estar o no querer colocarlo puede ser posible ejecutar el archivo por medio del comando invocador shell `sh`. 
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
