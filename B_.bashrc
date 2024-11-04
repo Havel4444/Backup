@@ -194,6 +194,23 @@ function pysi() {
   python3 "$file"
   sed -i '$d' "$file"
 }
+# Ejecutar una parte de un archivo bash.
+function bafu() {
+  file="$1"
+  number=$2
+  argument="$3"
+  echo "p$number" >>"$file"
+  ./"$file"
+  sed -i '$d' "$file"
+}
+# Mostrar una parte de un archivo bash.
+function basi() {
+  file="$1"
+  number=$2
+  echo "from inspect import getsource; print(getsource("p$number"))" >>"$file"
+  ./"$file"
+  sed -i '$d' "$file"
+}
 # Temp
 function temp() {
   cd "$(mktemp -d)"
