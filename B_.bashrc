@@ -206,10 +206,11 @@ function bafu() {
 # Mostrar una parte de un archivo bash.
 function basi() {
   file="$1"
-  number=$2
-  echo "from inspect import getsource; print(getsource("p$number"))" >>"$file"
-  ./"$file"
-  sed -i '$d' "$file"
+  number="$2"
+  function_name="p$number"
+
+  # Busca y muestra la función en un script Bash
+  sed -n "/^\s*\(function\s\+\)\?$function_name\s*()/,/^}/p" "$file"
 }
 # Temp
 function temp() {

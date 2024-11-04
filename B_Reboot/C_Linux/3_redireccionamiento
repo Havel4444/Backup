@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## 1. Redireccionamiento con sobreescritura:
+echo "hola mundo" >script.sh
+
+## 2. Redireccionamiento sin sobreescritura:
+echo "hola mundo" >>script.sh

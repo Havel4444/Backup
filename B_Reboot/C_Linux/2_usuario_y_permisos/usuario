@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## 1. Metodo manual: Agregar un usuario con ruta predeterminada + shell personalizada.
+sudo useradd ramon -m -s /bin/zsh
+
+## 2. Metodo automatico: Agregar un usuario con ruta y shell predeterminada.
+sudo useradd ramon -m -s
+
+## 3. Eliminacion: Elimina ademas del propio usuario a su propia ruta de manera forzada.
+sudo userdel -r ramon
+
+## 4. Contraseña:
