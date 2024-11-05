@@ -29,12 +29,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Usuario y permisos.md",
+                "file": "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Usuario y permisos"
+              "title": "Configuracion de linux 1"
             }
           }
         ],
@@ -69,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "fondo",
+                "query": "xclip",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -182,10 +182,10 @@
   },
   "active": "7922322cfb557cb9",
   "lastOpenFiles": [
+    "Usuario y permisos.md",
     "Chest/Courses/Folder_linux/index_linux.md",
     "Chest/Courses/index.md",
     "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
-    "Usuario y permisos.md",
     "Chest/Courses/Folder_linux/S4vitar clase 6 asignacion y creacion de permisos.md",
     "Salidas y redireccionamiento.md",
     "Creacion de carpetas y archivos + hello world.md",

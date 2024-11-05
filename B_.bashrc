@@ -110,6 +110,11 @@ alias upda='sudo apt-get update'
 alias upgr='sudo apt-get upgrade'
 alias pi='ping 8.8.8.8'
 
+## Archivos predeterminados para copiar.
+# File: xclip
+alias scba='cat /home/havel/xclip/bash_functions | cpou'
+alias scpy='cat /home/havel/xclip/python_functions | cpou'
+
 alias cpou='xclip -selection clipboard'
 
 alias cpff='find . -type f | fzf | xclip -selection clipboard'
@@ -138,10 +143,11 @@ alias py='python3.9'
 alias dogi="~/.dotfiles/./sgit.sh"
 # Kitty opacity
 alias kiop="~/Desktop/code/./opacity.sh"
+
 # Backup
 alias bu="bash /home/havel/Backup/menu_files.sh"
-# Default.py
-alias scpy="cat /home/havel/Data/Scripts/Python/default.py | cpou"
+# default.py
+alias scpy="cat /home/havel/data/scripts/python/default.py | cpou"
 
 # Prueba
 function ippr() {
