@@ -15,9 +15,9 @@ function p3() {
   sudo userdel -r ramon
 }
 
-## 4. Contraseña:
+## 4. Seguridad: Agregacion de contraseña.
 function p4() {
-  echo "asd"
+  sudo passwd ramon
 }
 
 ## 5.
