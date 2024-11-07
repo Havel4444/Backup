@@ -24,28 +24,3 @@ function p4() {
 function p5() {
   echo "asd"
 }
-
-## 6.
-function p6() {
-  echo "asd"
-}
-
-## 7.
-function p7() {
-  echo "asd"
-}
-
-## 8.
-function p8() {
-  echo "asd"
-}
-
-## 9.
-function p9() {
-  echo "asd"
-}
-
-## 10.
-function p10() {
-  echo "asd"
-}

@@ -1,16 +1,21 @@
 #!/bin/bash
 
-## 1. tee
+## 1.
 function p1() {
   echo "asd"
 }
 
-## 2. wc
+## 2.
 function p2() {
   echo "asd"
 }
 
 ## 3.
 function p3() {
+  echo "asd"
+}
+
+## 4.
+function p4() {
   echo "asd"
 }
