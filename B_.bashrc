@@ -149,6 +149,9 @@ alias bu="bash /home/havel/Backup/menu_files.sh"
 # default.py
 alias scpy="cat /home/havel/data/scripts/python/default.py | cpou"
 
+# Multiples hilos de descarga
+alias yt-dlp-aria='yt-dlp --external-downloader aria2c --external-downloader-args "-x 16 -k 1M"'
+
 # Prueba
 function ippr() {
   echo "IP privada: $(hostname -I | awk '{print $1}')"
