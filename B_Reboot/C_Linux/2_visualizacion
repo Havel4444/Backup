@@ -1,0 +1,50 @@
+#!/bin/bash
+
+## 0. Archivo necesario
+function p0() {
+  touch asd1
+  echo -e "Linux es un sistema 
+operativo de código abierto
+valorado por su estabilidad
+y seguridad." >>asd1
+}
+
+## 1. Head: Comando -n para delimitar las lineas.
+function p1() {
+  head -n2 asd1
+}
+
+## 2. Tail: Comando -n para delimitar las lineas.
+function p2() {
+  tail -n1 asd1
+}
+
+## 3. Tail: Comando -f para ver en tiempo real las ultimas lineas.
+function p3() {
+  tail -f asd1
+}
+
+## 4. Wc: Comando -l para ver el total de lineas.
+function p4() {
+  wc -l asd1
+}
+
+## 5. Wc: Comando -w para ver el total de letras.
+function p5() {
+  wc -w asd1
+}
+
+## 6. Wc: Comando -c para ver el total de caracteres.
+function p6() {
+  wc -c asd1
+}
+
+## 7. Nl: Muestra el contenido del archivo mas un numeral de lineas.
+function p7() {
+  nl asd1
+}
+
+## 8. Strings: Muestra solo letras, numeros y caracteres especiales.
+function p8() {
+  strings asd1
+}

@@ -267,3 +267,17 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 # xbindkeys
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# fnm
+FNM_PATH="/home/havel/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env)"
+fi
+
+# fnm
+FNM_PATH="/home/havel/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env)"
+fi
