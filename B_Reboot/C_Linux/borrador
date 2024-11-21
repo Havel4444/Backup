@@ -1,0 +1,8 @@
+#!/bin/bash
+
+i=1
+
+while i=1; do
+  echo "i vale: $i"
+  sleep 3
+done
