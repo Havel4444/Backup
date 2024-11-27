@@ -1,6 +1,0 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nullam vitae neque sed odio bibendum commodo vitae vel ligula.
-Proin nec libero nec lorem faucibus accumsan sed sit amet sapien.
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-La palabra secreta es: SECRETO123.
-Cras sollicitudin, ligula a faucibus sagittis, orci magna fermentum eros, quis fermentum risus est quis lorem.
