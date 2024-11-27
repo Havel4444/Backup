@@ -42,3 +42,5 @@ set shiftwidth=4
 
 " Convierte los tabuladores en espacios
 set expandtab
+
+set wrap

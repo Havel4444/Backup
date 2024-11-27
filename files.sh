@@ -20,11 +20,13 @@ directories=(
   "Obsidian"
   "S4vitar"
   "Reboot"
+  "Files"
 )
 paths_of_directories=(
   "/home/havel/Documentos/Cofre"
   "/home/havel/Data/Scripts/Python"
   "/home/havel/Escritorio"
+  "/home/havel/Data"
 )
 #-------------------------------
 # Files
