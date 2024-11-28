@@ -9,32 +9,32 @@ valorado por su estabilidad
 y seguridad." >>asd1
 }
 
-## 1. Head: Comando -n para delimitar las lineas.
+## 1. Head: Comando para delimitar las lineas.
 function p1() {
   head -n2 asd1
 }
 
-## 2. Tail: Comando -n para delimitar las lineas.
+## 2. Tail: Comando para delimitar las lineas.
 function p2() {
   tail -n1 asd1
 }
 
-## 3. Tail: Comando -f para ver en tiempo real las ultimas lineas.
+## 3. Tail: Comando para ver en tiempo real las ultimas lineas.
 function p3() {
   tail -f asd1
 }
 
-## 4. Wc: Comando -l para ver el total de lineas.
+## 4. Wc: Comando para ver el total de lineas.
 function p4() {
   wc -l asd1
 }
 
-## 5. Wc: Comando -w para ver el total de letras.
+## 5. Wc: Comando para ver el total de letras.
 function p5() {
   wc -w asd1
 }
 
-## 6. Wc: Comando -c para ver el total de caracteres.
+## 6. Wc: Comando para ver el total de caracteres.
 function p6() {
   wc -c asd1
 }

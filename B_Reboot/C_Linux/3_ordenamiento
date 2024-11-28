@@ -1,0 +1,63 @@
+#!/bin/bash
+
+## 0. Archivo necesario
+function p0() {
+  touch asd1
+  echo -e "Linux es un sistema 
+operativo de código abierto
+2. mundo
+1. HOLA
+valorado por su estabilidad
+valorado por su estabilidad
+y seguridad." >>asd1
+}
+
+## 1. Sort: Forma alfabeticamente.
+function p1() {
+  sort asd1
+}
+
+## 2. Sort: Forma numerica.
+function p2() {
+  sort -n asd1
+}
+
+## 3. Sort: Forma inversa.
+function p3() {
+  sort -r asd1
+}
+
+## 4. Sort: Ordenar aleatoriamente.
+function p4() {
+  sort -R asd1
+}
+
+## 5. Uniq: Quita las lineas duplicadas.
+function p5() {
+  uniq -u asd1
+}
+
+## 6. Uniq: Muestra las lineas duplicadas individualmete.
+function p6() {
+  uniq -d asd1
+}
+
+## 7. Uniq: Muestra las lineas duplicadas en grupo.
+function p7() {
+  uniq -D asd1
+}
+
+## 8. Uniq: Cuenta y muestra las lineas.
+function p8() {
+  uniq -c asd1
+}
+
+## 9.
+function p9() {
+  echo "asd"
+}
+
+## 10.
+function p10() {
+  echo "asd"
+}
