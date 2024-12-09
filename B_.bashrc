@@ -250,8 +250,19 @@ function asd() {
 # Usb
 #/home/havel/Data/Scripts/Bash/Usb
 
-function usb1() {
+function usbl() {
   sudo mount /dev/sdb1 /mnt/usb
+
+  if [ ! -d /mnt/usb/acar ]; then
+    cp -r /mnt/f/acar /mnt/usb
+    echo "El archivo fue copiado."
+  else
+    rm -r /mnt/usb/acar
+    cp -r /mnt/f/acar /mnt/usb
+    echo "El archivo ya existe"
+    echo "El archivo fue remplazado."
+  fi
+  #sudo umount /mnt/usb
 }
 
 # Alias definitions.
