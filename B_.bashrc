@@ -120,6 +120,12 @@ alias cpou='xclip -selection clipboard'
 alias cpff='find . -type f | fzf | xclip -selection clipboard'
 alias cdfd='cd $(find . -type d | fzf)'
 
+# Momentos
+alias cdmo='cd /mnt/storage/Moments'
+
+# Ajedrez
+alias ajedrez='xboard -fcp gnuchess -size 400x400'
+
 # Pantalla
 alias di='redshift -O 3200'
 alias ta='redshift -O 2500'
@@ -187,7 +193,7 @@ function co() {
   ./"$file"
 }
 # Ejecutar partes de archivos python3 con funciones "def".
-function pyde() {
+function expy() {
   file="$1"
   number=$2
   argument="$3"
@@ -196,7 +202,7 @@ function pyde() {
   sed -i '$d' "$file"
 }
 # Mostrar la sintax de una funcion.
-function pysi() {
+function sepy() {
   file="$1"
   number=$2
   echo "from inspect import getsource; print(getsource("p$number"))" >>"$file"
@@ -204,7 +210,7 @@ function pysi() {
   sed -i '$d' "$file"
 }
 # Ejecutar una parte de un archivo bash.
-function bafu() {
+function exba() {
   file="$1"
   number=$2
   argument="$3"
@@ -213,7 +219,7 @@ function bafu() {
   sed -i '$d' "$file"
 }
 # Mostrar una parte de un archivo bash.
-function basi() {
+function seba() {
   file="$1"
   number="$2"
   function_name="p$number"
@@ -240,6 +246,12 @@ function temb() {
 function asd() {
   qwe="$1"
   "$qwe" 2>&1 | tee nada | xclip -selection clipboard
+}
+# Usb
+#/home/havel/Data/Scripts/Bash/Usb
+
+function usb1() {
+  sudo mount /dev/sdb1 /mnt/usb
 }
 
 # Alias definitions.

@@ -51,13 +51,3 @@ function p7() {
 function p8() {
   uniq -c asd1
 }
-
-## 9.
-function p9() {
-  echo "asd"
-}
-
-## 10.
-function p10() {
-  echo "asd"
-}
