@@ -146,12 +146,12 @@ alias fo='kitty list-fonts'
 # Python
 alias py='python3.9'
 # Scrip bash .dotfile git
-alias dogi="~/.dotfiles/./sgit.sh"
+#alias dogi="~/.dotfiles/./sgit.sh"
 # Kitty opacity
 alias kiop="~/Desktop/code/./opacity.sh"
 
 # Backup
-alias bu="bash /home/havel/Backup/menu_files.sh"
+alias bu="bash /home/havel/backup/menu_files.sh"
 # default.py
 alias scpy="cat /home/havel/data/scripts/python/default.py | cpou"
 
