@@ -1,0 +1,8 @@
+#!/bin/bash
+
+n1="asd"
+n2="123"
+
+suma="$n1""$n2"
+
+echo $suma

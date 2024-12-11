@@ -31,10 +31,12 @@ paths_of_directories=(
 files=(
   ".bashrc"
   "init.vim"
+  "input.conf"
 )
 paths_of_files=(
   "/home/havel"
   "/home/havel/conf_nvim/"
+  "/home/havel/.config/mpv"
 )
 
 for file in "${files[@]}"; do

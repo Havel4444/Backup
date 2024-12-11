@@ -1,4 +1,3 @@
-[[index]]
 
 ## INTRO A LINUX
 [[Configuracion de linux 1]]
