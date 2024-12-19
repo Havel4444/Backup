@@ -1,8 +1,19 @@
 #!/bin/bash
 
-n1="asd"
-n2="123"
+function p1() {
+  var1="hola"
+  var2="_mundo"
 
-suma="$n1""$n2"
+  union="$var1$var2"
 
-echo $suma
+  echo "$union"
+}
+
+function p2() {
+  num1=2
+  num2=2
+
+  sum=$((num1 + num2))
+
+  echo $sum
+}

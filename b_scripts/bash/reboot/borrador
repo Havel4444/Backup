@@ -1,0 +1,15 @@
+#!/bin/bash
+path="/home/havel/data/scripts/bash/reboot/0_comandos"
+
+function p1() {
+  if [ -e $path ]; then
+    echo "El filesystem existe"
+    if [ -f $path ]; then
+      echo "Es un archivo"
+    elif [ -d $path ]; then
+      echo "Es un directorio"
+    fi
+  else
+    echo "No es un filesystem"
+  fi
+}

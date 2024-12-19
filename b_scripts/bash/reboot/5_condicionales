@@ -1,0 +1,44 @@
+#!/bin/bash
+
+## 1. Operadores de archivos: Existe tal cosa.
+function p1() {
+  path="/home/havel/data/scripts/bash/reboot/0_comandos"
+  if [ -e $path ]; then
+    echo -e "El filesystem existe\n"
+    if [ -f $path ]; then
+      echo -e "Es un archivo\n"
+    elif [ -d $path ]; then
+      echo -e "Es un directorio\n"
+    else
+      echo -e "No es ni un archivo y ni un directorio\n"
+    fi
+  else
+    echo -e "No es un filesystem\n"
+  fi
+}
+
+## 2. Operadores de comparacion numerica: Licencia de conducir.
+function p2() {
+  edad=18
+  intentos=3
+
+  if [ $intentos -ne 3 ]; then
+    if [ $edad -eq 17 ]; then
+      echo "Licencia provicional."
+    elif [ $edad -ge 18 ]; then
+      if [[ $edad -gt 17 && $edad -lt 60 ]]; then
+        echo "Licencia B1 con 10 años de vigencia."
+      elif [[ $edad -gt 59 && $edad -lt 80 ]]; then
+        echo "Licencia B1 con 5 años de vigencia."
+      else
+        echo "Licencia B1 con 2 años de vigencia."
+      fi
+    elif [ $edad -le 16 ]; then
+      echo "Licencia denegada."
+    fi
+  else
+    echo "Intentos agotados, espere al proximo año."
+  fi
+}
+
+## 3. Operadores de

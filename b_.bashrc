@@ -124,7 +124,7 @@ alias cdfd='cd $(find . -type d | fzf)'
 alias cdmo='cd /mnt/storage/Moments'
 
 # Ajedrez
-alias ajedrez='xboard -fcp gnuchess -size 400x400'
+alias ajedrez='cd /home/havel/Games/Ajedrez/logs_games && xboard -fcp gnuchess -size 400x400'
 
 # Pantalla
 alias di='redshift -O 3200'
@@ -251,7 +251,7 @@ function asd() {
 #/home/havel/Data/Scripts/Bash/Usb
 
 function usbl() {
-  sudo mount /dev/sdb1 /mnt/usb
+  #sudo mount /dev/sdb1 /mnt/usb
 
   if [ ! -d /mnt/usb/acar ]; then
     cp -r /mnt/f/acar /mnt/usb
