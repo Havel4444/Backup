@@ -11,41 +11,41 @@ turC="\e[0;36m\033[1m"
 graC="\e[0;37m\033[1m"
 
 function f_execut() {
-  bash /home/havel/backup/files.sh
+    bash /home/havel/backup/files.sh
 }
 function f_commit() {
-  path="$(dirname "$0")"
-  cd $path
-  a_commit=$1
+    path="$(dirname "$0")"
+    cd $path
+    a_commit=$1
 
-  git add .
-  git commit -m "${a_commit}"
-  git push -u origin main
+    git add .
+    git commit -m "${a_commit}"
+    git push -u origin main
 }
 function f_remove() {
-  path="$(dirname "$0")"
-  cd $path
-  rm -r b* && ls
-  rm -r B* && ls
+    path="$(dirname "$0")"
+    cd $path
+    rm -r b* && ls
+    rm -r B* && ls
 }
 function f_automatic() {
-  path="$(dirname "$0")"
-  cd $path
+    path="$(dirname "$0")"
+    cd $path
 
-  bash /home/havel/backup/files.sh
+    bash /home/havel/backup/files.sh
 
-  fecha="$(date +'%D %T')"
-  git add .
-  git commit -m "Automatico: ${fecha}"
-  git push -u origin main
+    fecha="$(date +'%D %T')"
+    git add .
+    git commit -m "Automatico: ${fecha}"
+    git push -u origin main
 }
 
 function f_help_panel() {
-  echo -e "\n${yelC}[+] Comandos:${endC}\n"
-  echo -e "\t -e Ejecutar files.sh."
-  echo -e "\t -c Aplicar commit en files.sh."
-  echo -e "\t -r Remover los archivos de files.sh."
-  echo -e "\t -h Panel de ayuda."
+    echo -e "\n${yelC}[+] Comandos:${endC}\n"
+    echo -e "\t -e Ejecutar files.sh."
+    echo -e "\t -c Aplicar commit en files.sh."
+    echo -e "\t -r Remover los archivos de files.sh."
+    echo -e "\t -h Panel de ayuda."
 
 }
 
@@ -55,32 +55,32 @@ declare -i execut=0
 declare -i remove=0
 
 while getopts "c:reha" arg; do
-  case $arg in
-  c)
-    a_commit="$OPTARG"
-    let commit+=1
-    ;;
-  e)
-    let execut+=1
-    ;;
-  r)
-    let remove+=1
-    ;;
-  a)
-    let automatic+=1
-    ;;
-  h) ;;
-  esac
+    case $arg in
+    c)
+        a_commit="$OPTARG"
+        let commit+=1
+        ;;
+    e)
+        let execut+=1
+        ;;
+    r)
+        let remove+=1
+        ;;
+    a)
+        let automatic+=1
+        ;;
+    h) ;;
+    esac
 done
 
 if [ "$commit" -eq 1 ]; then
-  f_commit "$a_commit"
+    f_commit "$a_commit"
 elif [ "$automatic" -eq 1 ]; then
-  f_automatic
+    f_automatic
 elif [ "$execut" -eq 1 ]; then
-  f_execut
+    f_execut
 elif [ "$remove" -eq 1 ]; then
-  f_remove
+    f_remove
 else
-  f_help_panel
+    f_help_panel
 fi

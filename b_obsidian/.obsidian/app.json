@@ -8,5 +8,6 @@
   "foldIndent": true,
   "autoPairBrackets": true,
   "spellcheck": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "showLineNumber": true
 }

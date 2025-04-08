@@ -2,21 +2,21 @@
 
 ## 1. Todos los permisos para todos.
 function p1() {
-  rm asd1 2>/dev/null
-  touch asd1
-  chmod 777 asd1
+    rm asd1 2>/dev/null
+    touch asd1
+    chmod 777 asd1
 }
 
 ## 2. Todos los permisos solo para el grupo.
 function p2() {
-  rm asd1 2>/dev/null
-  touch asd1
-  chmod 674 asd1
+    rm asd1 2>/dev/null
+    touch asd1
+    chmod 674 asd1
 }
 
 ## 3. Solo el permiso de lectura para todos.
 function p3() {
-  rm asd1 2>/dev/null
-  touch asd1
-  chmod 444 asd1
+    rm asd1 2>/dev/null
+    touch asd1
+    chmod 444 asd1
 }

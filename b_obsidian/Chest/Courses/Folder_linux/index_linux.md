@@ -1,4 +1,3 @@
-
 ## INTRO A LINUX
 [[Configuracion de linux 1]]
 [[Yt-dlp]]

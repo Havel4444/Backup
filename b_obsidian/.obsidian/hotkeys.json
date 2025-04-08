@@ -30,9 +30,32 @@
   "editor:follow-link": [
     {
       "modifiers": [
-        "Mod"
+        "Alt"
       ],
       "key": "J"
+    }
+  ],
+  "vimium:show-markers": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "F"
+    },
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "F"
+    }
+  ],
+  "editor:open-search": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "F"
     }
   ]
 }

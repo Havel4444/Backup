@@ -1,19 +1,19 @@
 #!/bin/bash
 
 function p1() {
-  var1="hola"
-  var2="_mundo"
+    var1="hola"
+    var2="_mundo"
 
-  union="$var1$var2"
+    union="$var1$var2"
 
-  echo "$union"
+    echo "$union"
 }
 
 function p2() {
-  num1=2
-  num2=2
+    num1=2
+    num2=2
 
-  sum=$((num1 + num2))
+    sum=$((num1 + num2))
 
-  echo $sum
+    echo $sum
 }

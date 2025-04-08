@@ -32,7 +32,7 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-  debian_chroot=$(cat /etc/debian_chroot)
+    debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
@@ -46,41 +46,41 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    # We have color support; assume it's compliant with Ecma-48
-    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-    # a case would tend to support setf rather than setaf.)
-    color_prompt=yes
-  else
-    color_prompt=
-  fi
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
+    else
+        color_prompt=
+    fi
 fi
 
 if [ "$color_prompt" = yes ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm* | rxvt*)
-  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-  ;;
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
 *) ;;
 esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  alias ls='ls --color=auto'
-  #alias dir='dir --color=auto'
-  #alias vdir='vdir --color=auto'
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
 
-  #alias grep='grep --color=auto'
-  #alias fgrep='fgrep --color=auto'
-  #alias egrep='egrep --color=auto'
+    #alias grep='grep --color=auto'
+    #alias fgrep='fgrep --color=auto'
+    #alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
@@ -91,13 +91,13 @@ fi
 #alias la='ls -A'
 #alias l='ls -CF'
 
-# alias.
+# alias[aly].
 alias p3="python3"
 alias menu="/home/havel/Data/Scripts/./menu.sh"
 alias nodu="awk '!x[\$0]++'"
 alias sp="trans -b :es"
+alias load='xdg-open'
 alias en="trans -b :en"
-alias open='xdg-open'
 alias cph1="less .bash_history | fzf --tac | xclip -selection clipboard"
 
 alias er='vim ~/error.txt'
@@ -132,6 +132,22 @@ alias ta='redshift -O 2500'
 alias no='redshift -O 2200'
 alias re='redshift -x'
 
+# MPV
+alias mpv-loop-file='mpv --loop-file=inf'
+alias mpv-loop-list='mpv --loop-playlist=inf'
+alias mpv-random='mpv --shuffle --loop-playlist=inf'
+
+# DLP
+alias dlpv='yt-dlp --merge-output-format mp4'
+alias dlpa='yt-dlp -x --audio-format mp3'
+alias dlpa='yt-dlp -x --audio-format mp3'
+
+# Borrado definitivo
+alias rm-d='shred -u -v'
+
+# Cambiar el nombre del ultimo archivo
+#alias name='ls -tr | tail -n1 | xargs -I {} mv {}'
+
 # Temp
 #alias temp="cd '$(mktemp -d)' && touch borrador.py && nvim borrador.py && echo '#!/usr/bin/env python3' >> borrador.py"
 #alias temb="cd '$(mktemp -d)' && touch borrador.sh && nvim borrador.sh && echo '#!/bin/bash' >> borrador.sh"
@@ -158,111 +174,154 @@ alias scpy="cat /home/havel/data/scripts/python/default.py | cpou"
 # Multiples hilos de descarga
 alias yt-dlp-aria='yt-dlp --external-downloader aria2c --external-downloader-args "-x 16 -k 1M"'
 
+# Cama
+#alias cama='ffplay rtsp://admin:%21CuaAola08545qa@192.168.1.76/PSIA/Streaming/channels/1'
+alias cama='ffmpeg -rtsp_transport tcp -i rtsp://admin:%21CuaAola08545qa@192.168.1.76/PSIA/Streaming/channels/1 \
+-rtsp_transport tcp -i rtsp://admin:%21CuaAola08545qa@192.168.1.76/PSIA/Streaming/channels/2 \
+-filter_complex "[0:v][1:v]hstack=inputs=2" -f sdl "Cámaras"'
+
+# Cambiar el nombre del ultimo archivo
+alias rename='ls -tr | tail -n1 | xargs -I {} mv {}'
+
+# Mistral-corrector
+function edit() {
+    name="$1"
+
+    letras=(a b c d e f g h i j k l m n o p q r s t u v w x y z)
+    letter=${letras[$RANDOM % ${#letras[@]}]}
+
+    ls -tr | tail -n1 | xargs -I {} mv {} "$1$letter.png"
+}
+
+# Mistral-corrector-2
+function edit2() {
+    name="$1"
+
+    letras=(a b c d e f g h i j k l m n o p q r s t u v w x y z)
+    letter=${letras[$RANDOM % ${#letras[@]}]}
+
+    ls -tr | tail -n2 | head -n1 | xargs -I {} mv {} "$1$letter.png"
+}
+
 # Prueba
 function ippr() {
-  echo "IP privada: $(hostname -I | awk '{print $1}')"
+    echo "IP privada: $(hostname -I | awk '{print $1}')"
 }
 # Prueva 2
 function ippu() {
-  echo "IP publica: $(curl -s ifconfig.me)"
+    echo "IP publica: $(curl -s ifconfig.me)"
 }
+
 # Copiar funte de colores
 function cpco() {
-  cat ~/colours | cpou
+    cat ~/colours | cpou
 }
 # Eliminar acentos de un archivo.
 function seac() {
-  file_a=$1
-  file_b=$2
-  sed 's/á/a/g; s/é/e/g; s/í/i/g; s/ó/o/g; s/ú/u/g; s/ü/u/g; s/Á/A/g; s/É/E/g; s/Í/I/g; s/Ó/O/g; s/Ú/U/g; s/Ü/U/g' $file_a >$file_b
+    file_a=$1
+    file_b=$2
+    sed 's/á/a/g; s/é/e/g; s/í/i/g; s/ó/o/g; s/ú/u/g; s/ü/u/g; s/Á/A/g; s/É/E/g; s/Í/I/g; s/Ó/O/g; s/Ú/U/g; s/Ü/U/g' $file_a >$file_b
 }
 # Traductor
 function tr() {
-  data_1=$1
-  echo $data1 | cpou
+    data_1=$1
+    echo $data1 | cpou
 }
 # Copiar historial
 function cphi() {
-  cat ~/.bash_history >.function_history
-  tac .function_history | fzf --no-sort | xclip -selection clipboard
+    cat ~/.bash_history >.function_history
+    tac .function_history | fzf --no-sort | xclip -selection clipboard
 }
 # Copilador c++ y editor
 function co() {
-  file=$1
-  g++ "$file.cpp" -o "$file"
-  ./"$file"
+    file=$1
+    g++ "$file.cpp" -o "$file"
+    ./"$file"
 }
 # Ejecutar partes de archivos python3 con funciones "def".
 function expy() {
-  file="$1"
-  number=$2
-  argument="$3"
-  echo "p$number("$argument")" >>"$file"
-  python3 "$file"
-  sed -i '$d' "$file"
+    file="$1"
+    number=$2
+    argument="$3"
+    echo "p$number("$argument")" >>"$file"
+    python3 "$file"
+    sed -i '$d' "$file"
 }
 # Mostrar la sintax de una funcion.
 function sepy() {
-  file="$1"
-  number=$2
-  echo "from inspect import getsource; print(getsource("p$number"))" >>"$file"
-  python3 "$file"
-  sed -i '$d' "$file"
+    file="$1"
+    number=$2
+    echo "from inspect import getsource; print(getsource("p$number"))" >>"$file"
+    python3 "$file"
+    sed -i '$d' "$file"
 }
 # Ejecutar una parte de un archivo bash.
 function exba() {
-  file="$1"
-  number=$2
-  argument="$3"
-  echo "p$number" >>"$file"
-  ./"$file"
-  sed -i '$d' "$file"
+    file="$1"
+    number=$2
+    argument="$3"
+    echo "p$number" >>"$file"
+    ./"$file"
+    sed -i '$d' "$file"
 }
 # Mostrar una parte de un archivo bash.
 function seba() {
-  file="$1"
-  number="$2"
-  function_name="p$number"
+    file="$1"
+    number="$2"
+    function_name="p$number"
 
-  # Busca y muestra la función en un script Bash
-  sed -n "/^\s*\(function\s\+\)\?$function_name\s*()/,/^}/p" "$file"
+    # Busca y muestra la función en un script Bash
+    sed -n "/^\s*\(function\s\+\)\?$function_name\s*()/,/^}/p" "$file"
 }
 # Temp
 function temp() {
-  cd "$(mktemp -d)"
-  punto=$(pwd)              # En bash es necesario usar $() en un comando para asignar el resultado a una variable, dentro de una cadena tambien selo utiliza.
-  touch "${punto}/borrador" # En bash se usan llaves {} para delimitar la variables en una cadena de texto.
-  echo "#!/usr/bin/env python3" >"${punto}/borrador"
-  nvim "${punto}/borrador"
+    cd "$(mktemp -d)"
+    punto=$(pwd)              # En bash es necesario usar $() en un comando para asignar el resultado a una variable, dentro de una cadena tambien selo utiliza.
+    touch "${punto}/borrador" # En bash se usan llaves {} para delimitar la variables en una cadena de texto.
+    echo "#!/usr/bin/env python3" >"${punto}/borrador"
+    nvim "${punto}/borrador"
 }
 function temb() {
-  cd "$(mktemp -d)"
-  punto=$(pwd)              # En bash es necesario usar $() en un comando para asignar el resultado a una variable, dentro de una cadena tambien selo utiliza.
-  touch "${punto}/borrador" # En bash se usan llaves {} para delimitar la variables en una cadena de texto.
-  echo "#!/bin/bash" >"${punto}/borrador"
-  nvim "${punto}/borrador"
+    cd "$(mktemp -d)"
+    punto=$(pwd)              # En bash es necesario usar $() en un comando para asignar el resultado a una variable, dentro de una cadena tambien selo utiliza.
+    touch "${punto}/borrador" # En bash se usan llaves {} para delimitar la variables en una cadena de texto.
+    echo "#!/bin/bash" >"${punto}/borrador"
+    nvim "${punto}/borrador"
 }
 
 function asd() {
-  qwe="$1"
-  "$qwe" 2>&1 | tee nada | xclip -selection clipboard
+    qwe="$1"
+    "$qwe" 2>&1 | tee nada | xclip -selection clipboard
 }
 # Usb
 #/home/havel/Data/Scripts/Bash/Usb
 
 function usbl() {
-  #sudo mount /dev/sdb1 /mnt/usb
+    #sudo mount /dev/sdb1 /mnt/usb
 
-  if [ ! -d /mnt/usb/acar ]; then
-    cp -r /mnt/f/acar /mnt/usb
-    echo "El archivo fue copiado."
-  else
-    rm -r /mnt/usb/acar
-    cp -r /mnt/f/acar /mnt/usb
-    echo "El archivo ya existe"
-    echo "El archivo fue remplazado."
-  fi
-  #sudo umount /mnt/usb
+    if [ ! -d /mnt/usb/acar ]; then
+        cp -r /mnt/f/acar /mnt/usb
+        echo "El archivo fue copiado."
+    else
+        rm -r /mnt/usb/acar
+        cp -r /mnt/f/acar /mnt/usb
+        echo "El archivo ya existe"
+        echo "El archivo fue remplazado."
+    fi
+    #sudo umount /mnt/usb
+}
+
+function dlpf() {
+    url="$1"
+    yt-dlp --merge-output-format mp4 --add-header "Referer: https://kick.com" --add-header "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:110.0) Gecko/20100101 Firefox/110.0" "$url"
+}
+
+#yt-dlp --cookies-from-browser chrome https://www.youtube.com/shorts/PInRCfY9lx8
+
+# Mover archivos
+function mvle() {
+    cd /home/havel/Descargas
+    mv *LECCI* /home/havel/data/almacen_git/pdff_lessons
 }
 
 # Alias definitions.
@@ -271,18 +330,18 @@ function usbl() {
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+    . ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
 export PATH="/usr/local/bin:$PATH"
@@ -294,13 +353,27 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 # fnm
 FNM_PATH="/home/havel/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "$(fnm env)"
+    export PATH="$FNM_PATH:$PATH"
+    eval "$(fnm env)"
 fi
 
 # fnm
 FNM_PATH="/home/havel/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "$(fnm env)"
+    export PATH="$FNM_PATH:$PATH"
+    eval "$(fnm env)"
 fi
+
+# theme
+#export GTK_THEME=Adwaita-dark
+#killall nautilus && nautilus &
+
+# Auto jump
+. /usr/share/autojump/autojump.sh
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+
+# fondo
+#feh --bg-scale ~/Descargas/fondo.jpg
+alias languagetool="java -jar ~/programs/LanguageTool-6.5/languagetool-commandline.jar"

@@ -24,35 +24,21 @@
             }
           },
           {
-            "id": "7922322cfb557cb9",
+            "id": "d5fdc9f8176af50b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chest/Courses/Folder_linux/Fundamentos de linux comandos.md",
+                "file": "COMANDOS_PRINCIPALES.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fundamentos de linux comandos"
-            }
-          },
-          {
-            "id": "4681d37bf166e1d3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Chest/Courses/Folder_linux/Fundamentos de linux comandos.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Fundamentos de linux comandos"
+              "title": "COMANDOS_PRINCIPALES"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -71,10 +57,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de archivos"
             }
           },
           {
@@ -83,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "xargs",
+                "query": "youtube",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -91,7 +78,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Buscar"
             }
           },
           {
@@ -104,12 +91,12 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "31a5cc805cbb3886",
@@ -186,42 +173,43 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "4681d37bf166e1d3",
+  "active": "d5fdc9f8176af50b",
   "lastOpenFiles": [
-    "Chest/Courses/Folder_linux/index_linux.md",
+    "key_bash.md",
     "Chest/Courses/index.md",
-    "Chest/Courses/Folder_linux/Fundamentos de linux comandos.md",
-    "Yt-dlp.md",
-    "Usuario y permisos.md",
+    "COMANDOS_PRINCIPALES.md",
+    "Sin título.md",
+    "Chest/Courses/Folder_linux/index_linux.md",
     "Chest/Courses/Folder_linux/Configuracion de linux 1.md",
+    "ollama.md",
+    "IN, ON AND AT.md",
+    "key_english.md",
+    "HOW MUCH.md",
+    "HOW MANY.md",
+    "ADJETIVOS CALIFICATIVOS.md",
+    "A AND AN + THERE IS THERE ARE.md",
+    "USED YOUR AND YOU.md",
+    "USED TO.md",
+    "WHO, WHY AND BECAUSE.md",
+    "TOBE NEGATIVE AND AFFIRMATIVE.md",
+    "WHAT AND WHERE.md",
+    "ING.md",
+    "HIS AND HER.md",
+    "Chest/Courses/Folder_english/index_english.md",
+    "Chest/Courses/Folder_linux/Fundamentos de linux comandos.md",
+    "in, on y at.md",
+    "Yt-dlp.md",
+    "Pasted image 20250109200251.png",
+    "Usuario y permisos.md",
     "Chest/Courses/Folder_linux/S4vitar clase 6 asignacion y creacion de permisos.md",
-    "Salidas y redireccionamiento.md",
-    "Creacion de carpetas y archivos + hello world.md",
-    "Chest/Courses/Folder_linux/Fundamentos de la red 1.md",
-    "Chest/Courses/Folder_linux/Nestor clase 2 crear, copiar, mover y eliminar archivos y carpetas.md",
-    "Chest/Courses/Folder_python/index_python.md",
-    "Chest/Courses/Folder_python/shebang y convenios.md",
-    "metodos.md",
-    "bucles.md",
-    "condicionales.md",
-    "Chest/Courses/Folder_linux/S4vitar clase 7 permisos especiales.md",
-    "Chest/Courses/Folder_linux/S4vitar clase 8 directorios.md",
-    "Chest/Courses/Folder_linux/S4vitar coleccion find and grep.md",
-    "Chest/Courses/Folder_linux/S4vitar conexion ssh.md",
-    "Chest/Courses/Folder_linux/Nestor clase 3 explorando el contenido de nuestros archivos.md",
-    "Chest/Courses/Folder_linux/S4vitar clase 5 lectura e interpretacin de permisos.md",
-    "Chest/Courses/Folder_linux/S4vitar clase 4 descriptores de archivos.md",
-    "Chest/Courses/Folder_linux/S4vitar clase 3 introduccion a linux 3.md",
-    "Chest/Courses/Folder_linux/S4vitar clase 2 introduccion a linux 2.md",
-    "listas.md",
     "Chest/Courses/Folder_c++",
     "123~",
     "123",
