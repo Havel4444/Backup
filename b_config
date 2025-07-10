@@ -8,15 +8,20 @@ font pango:monospace 8
 
 # Autostart applications
 # Establecer el fondo de pantalla al inicio
-exec_always feh --bg-scale /home/havel/imagenes/imagenes_no_borrar/1378890.png
+#exec_always feh --bg-scale /home/havel/Imágenes/imagenes_no_borrar/1378890.png
+exec_always --no-startup-id bash -c "while [ -z \"$(pgrep X)\" ]; do sleep 0.5; done; sleep 1 && feh --bg-scale /home/havel/Imágenes/imagenes_no_borrar/1378890.png"
+
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec --no-startup-id picom
+###################################exec --no-startup-id picom
 exec --no-startup-id dunst
 exec --no-startup-id google-chrome --profile-directory="Profile 3"
 
+# Picom
+#exec_always --no-startup-id picom --experimental-backends --config ~/.config/picom.conf
+exec_always --no-startup-id picom --config ~/.config/picom.conf
 
 # Audio controls
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -43,8 +48,11 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+p exec rofi -show run
 #bindsym $mod+q exec flatpak run app.zen_browser.zen
 
+# Acceso directo por combinacion.
 bindsym $mod+shift+a exec google-chrome --profile-directory="Profile 1"
 bindsym $mod+shift+s exec google-chrome --profile-directory="Profile 3"
+bindsym $mod+shift+z exec code
+bindsym $mod+shift+x exec obsidian
 
 
 

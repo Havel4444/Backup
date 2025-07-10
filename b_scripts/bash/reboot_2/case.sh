@@ -141,9 +141,7 @@ function p5(){
         3) ;;
     esac
 
-    if [[ "$value" =~ ^[1-3]$ ]]; then
-
-
+    if 
 
         if [ $c_date -eq 1 ]; then
             f_date
