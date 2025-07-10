@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+
+set timeout 10
+log_file /tmp/bluetooth-init.log
+
+spawn bluetoothctl
+expect "#"
+send "power on\r"
+expect "Changing power on succeeded"
+send "connect 41:42:FF:59:69:C6\r"
+expect "Connection successful"
+send "exit\r"
+expect eof

@@ -33,12 +33,14 @@ files=(
     "init.vim"
     "input.conf"
     "config"
+    "picom.conf"
 )
 paths_of_files=(
     "/home/havel"
     "/home/havel/conf_nvim/"
     "/home/havel/.config/mpv"
     "/home/havel/.config/i3"
+    "/home/havel/.config/picom"
 )
 
 for file in "${files[@]}"; do

@@ -217,6 +217,91 @@ set list
 ```
 
 
+# PICOM
+```bash
+#################################
+#           General             #
+#################################
+
+backend = "xrender";
+vsync = true;
+use-damage = true;
+detect-client-opacity = true;
+mark-wmwin-focused = true;
+mark-ovredir-focused = true;
+detect-rounded-corners = false;
+detect-transient = true;
+
+#################################
+#            Shadows            #
+#################################
+
+shadow = false;
+
+#################################
+#           Fading              #
+#################################
+
+fading = false;
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+
+#################################
+#       Transparency            #
+#################################
+
+inactive-opacity = 1.0;
+frame-opacity = 1.0;
+inactive-opacity-override = false;
+focus-exclude = [];
+
+#################################
+#           Corners             #
+#################################
+
+corner-radius = 0;
+rounded-corners-exclude = [
+  "window_type = 'dock'",
+  "window_type = 'desktop'"
+];
+
+#################################
+#          Blur                 #
+#################################
+
+blur-background = false;
+blur-background-frame = false;
+blur-background-exclude = [];
+
+#################################
+#       Shadow Exclude          #
+#################################
+
+shadow-exclude = [
+  "name = 'Notification'",
+  "class_g = 'Conky'",
+  "class_g ?= 'Notify-osd'",
+  "class_g = 'Cairo-clock'",
+  "_GTK_FRAME_EXTENTS@"
+];
+
+#################################
+#         Performance           #
+#################################
+
+# Optional: Unredirect fullscreen windows to improve performance in games/videos
+unredir-if-possible = true;
+unredir-if-possible-delay = 0;
+unredir-if-possible-exclude = [];
+
+#################################
+#         D-Bus/Debug           #
+#################################
+
+# dbus = false
+# log-level = "warn";
+# log-file = "/dev/null";
+```
 
 
 # INSTALL
@@ -483,13 +568,22 @@ sudo apt-get install p7zip-full
 
 Comandos en modo avanzado:
 ```sh
+// --- Comandos y mapas personalizados ---
+api.mapkey('<ctrl-y>', 'Show me the money', function() {
+    api.Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
+});
+api.map('gt', 'T');
+
+// --- Unmap keys innecesarios ---
 api.unmap('j');
+api.unmap('g');
 api.unmap('k');
 api.unmap('l');
 api.unmap('i');
 api.unmap('t');
 api.unmap('f');
 api.unmap('h');
+api.unmap('0');
 api.unmap('1');
 api.unmap('2');
 api.unmap('3');
@@ -499,9 +593,287 @@ api.unmap('6');
 api.unmap('7');
 api.unmap('8');
 api.unmap('9');
-api.unmap('0');
-```
 
+// ---- Midnight Slate Theme ----
+settings.theme = `
+/* Edit these variables for easy theme making */
+:root {
+  --font: monospace; /* Cambiamos a monospace para evitar problemas de renderizado */
+  --font-size: 12;
+  --font-weight: normal; /* Normalizamos el peso para evitar conflictos */
+
+  /* --- Midnight Slate Theme --- */
+  --fg: #D8DEE9;
+  --bg: #242933;
+  --bg-dark: #1E2229;
+  --border: #2A2F3A;
+  --main-fg: #7DCFFF;
+  --accent-fg: #FFB86C;
+  --info-fg: #BD93F9;
+  --select: #3B4252;
+}
+
+/* ---------- Generic ---------- */
+.sk_theme {
+  background: var(--bg) !important;
+  color: var(--fg) !important;
+  background-color: var(--bg) !important;
+  border-color: var(--border) !important;
+  font-family: var(--font);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+input {
+  font-family: var(--font);
+  font-weight: var(--font-weight);
+}
+
+.sk_theme tbody {
+  color: var(--fg) !important;
+}
+
+.sk_theme input {
+  color: var(--fg) !important;
+}
+
+/* Hints */
+#sk_hints .begin {
+  color: var(--accent-fg) !important;
+}
+
+#sk_tabs .sk_tab {
+  background: var(--bg-dark) !important;
+  border: 1px solid var(--border) !important;
+}
+
+#sk_tabs .sk_tab_title {
+  color: var(--fg) !important;
+}
+
+#sk_tabs .sk_tab_url {
+  color: var(--main-fg) !important;
+}
+
+#sk_tabs .sk_tab_hint {
+  background: var(--bg) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--accent-fg) !important;
+}
+
+.sk_theme #sk_frame {
+  background: var(--bg) !important;
+  opacity: 0.2;
+  color: var(--accent-fg) !important;
+}
+
+/* ---------- Omnibar ---------- */
+.sk_theme .title {
+  color: var(--accent-fg) !important;
+}
+
+.sk_theme .url {
+  color: var(--main-fg) !important;
+}
+
+.sk_theme .annotation {
+  color: var(--accent-fg) !important;
+}
+
+.sk_theme .omnibar_highlight {
+  color: var(--accent-fg) !important;
+}
+
+.sk_theme .omnibar_timestamp {
+  color: var(--info-fg) !important;
+}
+
+.sk_theme .omnibar_visitcount {
+  color: var(--accent-fg) !important;
+}
+
+.sk_theme #sk_omnibarSearchResult ul li:nth-child(odd) {
+  background: var(--bg-dark) !important;
+}
+
+.sk_theme #sk_omnibarSearchResult ul li.focused {
+  background: var(--border) !important;
+}
+
+.sk_theme #sk_omnibarSearchArea {
+  border-top-color: var(--border) !important;
+  border-bottom-color: var(--border) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important; /* Cambiamos a block para evitar problemas de layout */
+}
+
+.sk_theme #sk_omnibarSearchArea input,
+.sk_theme #sk_omnibarSearchArea span {
+  font-size: var(--font-size);
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  line-height: normal !important;
+  font-family: var(--font) !important;
+  background: var(--bg-dark) !important;
+}
+
+/* Esconder spans que puedan interferir */
+.sk_theme #sk_omnibarSearchArea span {
+  display: none !important;
+}
+
+.sk_theme .separator {
+  color: var(--accent-fg) !important;
+}
+
+/* ---------- Popup Notification Banner ---------- */
+#sk_banner {
+  font-family: var(--font);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  background: var(--bg) !important;
+  border-color: var(--border) !important;
+  color: var(--fg) !important;
+  opacity: 0.9;
+}
+
+/* ---------- Popup Keys ---------- */
+#sk_keystroke {
+  background-color: var(--bg) !important;
+}
+
+.sk_theme kbd .candidates {
+  color: var(--info-fg) !important;
+}
+
+.sk_theme span.annotation {
+  color: var(--accent-fg) !important;
+}
+
+/* ---------- Popup Translation Bubble ---------- */
+#sk_bubble {
+  background-color: var(--bg) !important;
+  color: var(--fg) !important;
+  border-color: var(--border) !important;
+}
+
+#sk_bubble * {
+  color: var(--fg) !important;
+}
+
+#sk_bubble div.sk_arrow div:nth-of-type(1) {
+  border-top-color: var(--border) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+#sk_bubble div.sk_arrow div:nth-of-type(2) {
+  border-top-color: var(--bg) !important;
+  border-bottom-color: var(--bg) !important;
+}
+
+/* ---------- Search ---------- */
+#sk_status,
+#sk_find {
+  font-size: var(--font-size);
+  border-color: var(--border) !important;
+}
+
+.sk_theme kbd {
+  background: var(--bg-dark) !important;
+  border-color: var(--border) !important;
+  box-shadow: none;
+  color: var(--fg) !important;
+}
+
+.sk_theme .feature_name span {
+  color: var(--main-fg) !important;
+}
+
+/* ---------- ACE Editor ---------- */
+#sk_editor {
+  background: var(--bg-dark) !important;
+  height: 50% !important;
+}
+
+.ace_dialog-bottom {
+  border-top: 1px solid var(--bg) !important;
+}
+
+.ace-chrome .ace_print-margin,
+.ace_gutter,
+.ace_gutter-cell,
+.ace_dialog {
+  background: var(--bg) !important;
+}
+
+.ace-chrome {
+  color: var(--fg) !important;
+}
+
+.ace_gutter,
+.ace_dialog {
+  color: var(--fg) !important;
+}
+
+.ace_cursor {
+  color: var(--fg) !important;
+}
+
+.normal-mode .ace_cursor {
+  background-color: var(--fg) !important;
+  border: var(--fg) !important;
+  opacity: 0.7 !important;
+}
+
+.ace_marker-layer .ace_selection {
+  background: var(--select) !important;
+}
+
+.ace_editor,
+.ace_dialog span,
+.ace_dialog input {
+  font-family: var(--font);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+`;
+
+// Aplicar estilos sin mostrar el popup
+api.Hints.style('border: solid 2px #2A2F3A; color: #FFB86C; background: initial; background-color: #1E2229;');
+api.Hints.style("border: solid 2px #2A2F3A !important; padding: 1px !important; color: #D8DEE9 !important; background: #1E2229 !important;", "text");
+api.Visual.style('marks', 'background-color: #FFB86C99;');
+api.Visual.style('cursor', 'background-color: #7DCFFF;');
+
+
+// Función para saltar a un porcentaje del video
+function jumpToPercentage(percentage) {
+    const video = document.querySelector('video');
+    if (video) {
+        video.currentTime = (percentage / 100) * video.duration;
+    }
+}
+
+// Mapear Alt + número para saltar a un porcentaje del video
+api.mapkey('<Alt-0>', 'Jump to 0% of video', () => jumpToPercentage(0));
+api.mapkey('<Alt-1>', 'Jump to 10% of video', () => jumpToPercentage(10));
+api.mapkey('<Alt-2>', 'Jump to 20% of video', () => jumpToPercentage(20));
+api.mapkey('<Alt-3>', 'Jump to 30% of video', () => jumpToPercentage(30));
+api.mapkey('<Alt-4>', 'Jump to 40% of video', () => jumpToPercentage(40));
+api.mapkey('<Alt-5>', 'Jump to 50% of video', () => jumpToPercentage(50));
+api.mapkey('<Alt-6>', 'Jump to 60% of video', () => jumpToPercentage(60));
+api.mapkey('<Alt-7>', 'Jump to 70% of video', () => jumpToPercentage(70));
+api.mapkey('<Alt-8>', 'Jump to 80% of video', () => jumpToPercentage(80));
+api.mapkey('<Alt-9>', 'Jump to 90% of video', () => jumpToPercentage(90));
+```
+-  #Vimium
+```bash
+unmap T
+unmap t
+unmap m
+```
 
 
 # ENTER UNIVERSAL

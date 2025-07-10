@@ -1,6 +1,7 @@
 
 [[key_english]]
 [[key_bash]]
+[[key_java_script]]
 #### Pasado
 
 [[index_linux]]
@@ -13,7 +14,9 @@
 
 #### EXTRA
 [[ollama]]
-
+[[AIM]]
+[[SOC]]
+[[CIBERSEGURIDAD]]
 
 
 

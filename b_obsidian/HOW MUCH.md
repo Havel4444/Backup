@@ -4,29 +4,28 @@
 # CATIDADES
 
 
-## CUANTOS Y CUANTAS
+## CUANTO Y CUANTA: SINGULAR
 
 **Example:**
 1. ¿Cuanta agua hay en la pisina?
-	q. How much water is there  in the pool?
-	r. There is a lot of water.
+	q. how much water is there in the pool?
+	r. There's a lot of water.
 
 2. ¿Cuanto dinero hay en la mesa?
 	q. How much money is there on the table?
-	r. There´s some money on the the table.
-
+	r. There's some money. 
 **Practice:**
 1. ¿Cuanto azucar hay en la taza?
-	q. How much sugar is there in the 
+	q. How much sugar is there in the cup?
 
 2. ¿Cuanta leche hay en la jara?
-	q. 
+	q. How much milk is there in the jug?
 
 3. ¿Cuanto queso hay en el sanduche?
-	q.
+	q. How much cheese is there in the sandwich
 
 4. ¿Cuanta sopa hay en el plato?
-	q.
+	q. How much soup is there on the plate?
 
 
 

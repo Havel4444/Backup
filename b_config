@@ -7,9 +7,16 @@ set $mod Mod4
 font pango:monospace 8
 
 # Autostart applications
+# Establecer el fondo de pantalla al inicio
+exec_always feh --bg-scale /home/havel/imagenes/imagenes_no_borrar/1378890.png
+
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
+exec --no-startup-id picom
+exec --no-startup-id dunst
+exec --no-startup-id google-chrome --profile-directory="Profile 3"
+
 
 # Audio controls
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -34,6 +41,12 @@ focus_wrapping yes
 # Application launcher
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+p exec rofi -show run
+#bindsym $mod+q exec flatpak run app.zen_browser.zen
+
+bindsym $mod+shift+a exec google-chrome --profile-directory="Profile 1"
+bindsym $mod+shift+s exec google-chrome --profile-directory="Profile 3"
+
+
 
 # Custom shortcuts
 bindsym $mod+c exec ffplay rtsp://admin:%21CuaAola08545qa@192.168.1.76/PSIA/Streaming/channels/1
@@ -46,10 +59,11 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-bindsym $mod+Left focus left
+# Otro modo
+bindsym $ctrl+alt+1 focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $ctrl+alt+2 focus right
 
 # Window movement
 bindsym $mod+Shift+h move left 80px
@@ -118,8 +132,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Resize mode
 mode "resize" {
     bindsym h resize shrink width 40 px or 10 ppt
-    bindsym j resize grow height 40 px or 10 ppt
-    bindsym k resize shrink height 40 px or 10 ppt
+    bindsym k resize grow height 40 px or 10 ppt
+    bindsym j resize shrink height 40 px or 10 ppt
     bindsym l resize grow width 40 px or 10 ppt
     bindsym Left resize shrink width 10 px or 10 ppt
     bindsym Down resize grow height 10 px or 10 ppt
@@ -136,18 +150,22 @@ bar {
     status_command i3status
 }
 
-# Volume controls
+# Volume controls predeterminados.
 bindsym $mod+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $mod+u exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+# Volumen de auriculares Bluetooth
+bindsym $mod+Shift+i exec --no-startup-id pactl set-sink-volume bluez_output.41_42_FF_59_69_C6.1 +5%
+bindsym $mod+Shift+u exec --no-startup-id pactl set-sink-volume bluez_output.41_42_FF_59_69_C6.1 -5%
+
 
 # Brightness controls
-bindsym $mod+shift+i exec brightnessctl set +10%
-bindsym $mod+shift+u exec brightnessctl set 10%-
+#bindsym $mod+shift+i exec brightnessctl set +10%
+#bindsym $mod+shift+u exec brightnessctl set 10%-
 
 # Screenshot controls
 bindsym Print exec flameshot gui
 #bindsym Shift+Print exec flameshot full -c -p ~/fotos
-bindsym Ctrl+p exec flameshot full -c -p ~/fotos
+bindsym Ctrl+shift+p exec flameshot full -c -p ~/fotos
 
 # Keyboard layout
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl
@@ -181,3 +199,19 @@ for_window [class="dev.warp.Warp"] focus
 # Cama
 #bindsym $mod+Shift+u exec --no-startup-id /home/havel/data/scripts/bash/cama.sh
 #bindsym $mod+Shift+u exec --no-startup-id "bash -c '/home/havel/data/scripts/bash/cama.sh'"
+
+# picom
+
+# Teclas multimedia
+bindsym 170 exec --no-startup-id playerctl previous  # Fn + F5 (anterior)
+bindsym 171 exec --no-startup-id playerctl next      # Fn + F6 (siguiente)
+bindsym 172 exec --no-startup-id playerctl play-pause # Fn + F7 (pausa/reproducción)
+
+# Volumen predeterminado
+#exec --no-startup-id amixer sset Master 16%
+#exec --no-startup-id pactl set-sink-volume bluez_output.41_42_FF_59_69_C6.1 20%
+exec --no-startup-id bash ~/.config/i3/set-audio-default.sh
+
+# Atajos
+#exec --no-startup-id xbindkeys
+# Atajos personalizados para teclas multimedia

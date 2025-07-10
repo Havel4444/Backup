@@ -140,10 +140,12 @@ alias mpv-random='mpv --shuffle --loop-playlist=inf'
 # DLP
 alias dlpv='yt-dlp --merge-output-format mp4'
 alias dlpa='yt-dlp -x --audio-format mp3'
-alias dlpa='yt-dlp -x --audio-format mp3'
 
 # Borrado definitivo
 alias rm-d='shred -u -v'
+
+# Conteo de archivos de profundidad 1.
+alias wc-l='find . -maxdepth 1 -type f -not -name ".*" | wc -l'
 
 # Cambiar el nombre del ultimo archivo
 #alias name='ls -tr | tail -n1 | xargs -I {} mv {}'
@@ -166,22 +168,64 @@ alias py='python3.9'
 # Kitty opacity
 alias kiop="~/Desktop/code/./opacity.sh"
 
-# Backup
-alias bu="bash /home/havel/backup/menu_files.sh"
+# Backup.
+alias backup="bash /home/havel/backup/menu_files.sh"
 # default.py
 alias scpy="cat /home/havel/data/scripts/python/default.py | cpou"
 
-# Multiples hilos de descarga
+# Multiples hilos de descarga.
 alias yt-dlp-aria='yt-dlp --external-downloader aria2c --external-downloader-args "-x 16 -k 1M"'
 
-# Cama
+# Cama.
 #alias cama='ffplay rtsp://admin:%21CuaAola08545qa@192.168.1.76/PSIA/Streaming/channels/1'
 alias cama='ffmpeg -rtsp_transport tcp -i rtsp://admin:%21CuaAola08545qa@192.168.1.76/PSIA/Streaming/channels/1 \
 -rtsp_transport tcp -i rtsp://admin:%21CuaAola08545qa@192.168.1.76/PSIA/Streaming/channels/2 \
 -filter_complex "[0:v][1:v]hstack=inputs=2" -f sdl "Cámaras"'
 
-# Cambiar el nombre del ultimo archivo
+# Cambiar el nombre del ultimo archivo.
 alias rename='ls -tr | tail -n1 | xargs -I {} mv {}'
+
+# Predeterminada hdmi.
+alias hon='/home/havel/data/scripts/bash/./set-audio-default.sh hdmi'
+
+# Predeterminada bluetooth.
+alias bon='/home/havel/data/scripts/bash/./set-audio-default.sh bluetooth'
+
+# Juegos retro.
+alias retro='flatpak run org.libretro.RetroArch'
+
+# Mistral-corrector
+function cn() {
+    name="$2"
+    valor="$1"
+
+    letras=(a b c d e f g h i j k l m n o p q r s t u v w x y z)
+    random=${letras[$RANDOM % ${#letras[@]}]}
+
+    creado1="$(ls -t | head -n1)"
+    creado2="$(ls -t | head -n2 | tail -n1)"
+    creado3="$(ls -t | head -n3 | tail -n1)"
+    creado4="$(ls -t | head -n4 | tail -n1)"
+
+    #if [ -n "$valor" ]; then
+    if [ "$valor" -eq 1 ]; then
+        mv "$creado1" "${name}_${random}1.png"
+    #if [ -z "$valor" ]; then
+    #    mv "$creado1" "${name}__${random}1.png"
+    elif [ "$valor" -eq 2 ]; then
+        mv "$creado1" "${name}__${random}1.png"
+        mv "$creado2" "${name}__${random}2.png"
+    elif [ "$valor" -eq 3 ]; then
+        mv "$creado1" "${name}__${random}1.png"
+        mv "$creado2" "${name}__${random}2.png"
+        mv "$creado3" "${name}__${random}3.png"
+    elif [ "$valor" -eq 4 ]; then
+        mv "$creado1" "${name}__${random}1.png"
+        mv "$creado2" "${name}__${random}2.png"
+        mv "$creado3" "${name}__${random}3.png"
+        mv "$creado4" "${name}__${random}4.png"
+    fi
+}
 
 # Mistral-corrector
 function edit() {
@@ -223,7 +267,7 @@ function seac() {
     sed 's/á/a/g; s/é/e/g; s/í/i/g; s/ó/o/g; s/ú/u/g; s/ü/u/g; s/Á/A/g; s/É/E/g; s/Í/I/g; s/Ó/O/g; s/Ú/U/g; s/Ü/U/g' $file_a >$file_b
 }
 # Traductor
-function tr() {
+function traductor() {
     data_1=$1
     echo $data1 | cpou
 }
@@ -259,7 +303,8 @@ function sepy() {
 function exba() {
     file="$1"
     number=$2
-    argument="$3"
+    #argument="$3"
+    #echo -e "\np$number" >>"$file"
     echo "p$number" >>"$file"
     ./"$file"
     sed -i '$d' "$file"
@@ -377,3 +422,15 @@ eval "$(pyenv virtualenv-init -)"
 # fondo
 #feh --bg-scale ~/Descargas/fondo.jpg
 alias languagetool="java -jar ~/programs/LanguageTool-6.5/languagetool-commandline.jar"
+
+# Autocompletado
+# Activar autosuggestions
+alias auto-on='export BASH_AUTOSUGGEST_ENABLE=1'
+# Desactivar autosuggestions
+alias auto-off='export BASH_AUTOSUGGEST_ENABLE=0'
+# Pavucontrol
+alias audio='pavucontrol'
+
+# Bluetooth auto
+# Conexión automática de ERAZER XT60PRO
+#echo -e 'connect 41:42:FF:59:69:C6\nexit' | bluetoothctl
