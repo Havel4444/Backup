@@ -20,11 +20,18 @@ directories=(
     "obsidian"
     "almacen_git"
     "scripts"
+    ".scripts"
+    "i3"
+    "bandit"
 )
 paths_of_directories=(
     "/home/havel/Documentos/cofre"
     "/home/havel/data"
     "/home/havel/data"
+    "/home/havel"
+    "/home/havel/.config"
+    "/home/havel"
+
 )
 #-------------------------------
 # Files
@@ -32,14 +39,12 @@ files=(
     ".bashrc"
     "init.vim"
     "input.conf"
-    "config"
     "picom.conf"
 )
 paths_of_files=(
     "/home/havel"
-    "/home/havel/conf_nvim/"
+    "/home/havel/conf_nvim"
     "/home/havel/.config/mpv"
-    "/home/havel/.config/i3"
     "/home/havel/.config/picom"
 )
 

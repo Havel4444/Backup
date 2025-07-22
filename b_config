@@ -18,6 +18,7 @@ exec --no-startup-id nm-applet
 ###################################exec --no-startup-id picom
 exec --no-startup-id dunst
 exec --no-startup-id google-chrome --profile-directory="Profile 3"
+exec --no-startup-id setxkbmap es
 
 # Picom
 #exec_always --no-startup-id picom --experimental-backends --config ~/.config/picom.conf
@@ -55,11 +56,11 @@ bindsym $mod+shift+z exec code
 bindsym $mod+shift+x exec obsidian
 
 
-
 # Custom shortcuts
 bindsym $mod+c exec ffplay rtsp://admin:%21CuaAola08545qa@192.168.1.76/PSIA/Streaming/channels/1
 bindsym $mod+b exec open . &
 bindsym $mod+o exec ~/.scripts/pause-video.sh
+bindsym $mod+shift+o exec ~/.scripts/pause-video-all.sh
 bindsym $mod+y exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Focus movement
@@ -171,9 +172,9 @@ bindsym $mod+Shift+u exec --no-startup-id pactl set-sink-volume bluez_output.41_
 #bindsym $mod+shift+u exec brightnessctl set 10%-
 
 # Screenshot controls
-bindsym Print exec flameshot gui
-#bindsym Shift+Print exec flameshot full -c -p ~/fotos
-bindsym Ctrl+shift+p exec flameshot full -c -p ~/fotos
+# bindsym Print exec flameshot gui
+bindsym $mod+shift+p exec flameshot gui
+bindsym $mod+Ctrl+shift+p exec flameshot full -c -p ~/fotos
 
 # Keyboard layout
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl
@@ -204,22 +205,14 @@ for_window [class="dev.warp.Warp"] focus
 for_window [class="dev.warp.Warp"] floating disable
 for_window [class="dev.warp.Warp"] focus
 
-# Cama
-#bindsym $mod+Shift+u exec --no-startup-id /home/havel/data/scripts/bash/cama.sh
-#bindsym $mod+Shift+u exec --no-startup-id "bash -c '/home/havel/data/scripts/bash/cama.sh'"
-
-# picom
-
 # Teclas multimedia
 bindsym 170 exec --no-startup-id playerctl previous  # Fn + F5 (anterior)
 bindsym 171 exec --no-startup-id playerctl next      # Fn + F6 (siguiente)
 bindsym 172 exec --no-startup-id playerctl play-pause # Fn + F7 (pausa/reproducción)
 
 # Volumen predeterminado
-#exec --no-startup-id amixer sset Master 16%
-#exec --no-startup-id pactl set-sink-volume bluez_output.41_42_FF_59_69_C6.1 20%
 exec --no-startup-id bash ~/.config/i3/set-audio-default.sh
 
-# Atajos
-#exec --no-startup-id xbindkeys
 # Atajos personalizados para teclas multimedia
+# Que se ejecute la mejor calidad
+exec --no-startup-id pactl set-card-profile bluez_card.41_42_FF_59_69_C6 a2dp-sink

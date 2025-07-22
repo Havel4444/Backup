@@ -1,4 +1,3 @@
-
 [[key_english]]
 [[key_bash]]
 [[key_java_script]]
@@ -17,6 +16,8 @@
 [[AIM]]
 [[SOC]]
 [[CIBERSEGURIDAD]]
+[[INSTALACIONES]]
+[[extra]]
 
 
 

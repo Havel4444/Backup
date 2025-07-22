@@ -126,11 +126,20 @@ alias cdmo='cd /mnt/storage/Moments'
 # Ajedrez
 alias ajedrez='cd /home/havel/Games/Ajedrez/logs_games && xboard -fcp gnuchess -size 400x400'
 
-# Pantalla
-alias di='redshift -O 3200'
-alias ta='redshift -O 2500'
-alias no='redshift -O 2200'
-alias re='redshift -x'
+# Pantalla · CREAR UN SCRIPT QUE ME PERMITA DE MANERA INTERACTIVA SUBIR Y BAJAR EL BRILLO + EL FLITRO NARANJA · CREAR UN SCRIPT QUE ME PERMITA DE MANERA INTERACTIVA SUBIR Y BAJAR EL BRILLO + EL FLITRO NARAN
+alias fpdi='redshift -O 3600'
+alias fpta='redshift -O 3200'
+alias fpno='redshift -O 2800'
+alias fpre='redshift -x'
+alias brdi='xrandr --output HDMI-0 --brightness 0.8'
+alias brta='xrandr --output HDMI-0 --brightness 0.6'
+alias brno='xrandr --output HDMI-0 --brightness 0.4'
+
+#br() { xrandr --output HDMI-0 --brightness 0.$1; }
+#function br() {
+#    nivel=$1
+#    xrandr --output HDMI-0 --brightness 0.$nivel
+#}
 
 # MPV
 alias mpv-loop-file='mpv --loop-file=inf'
