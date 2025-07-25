@@ -126,6 +126,9 @@ alias cdmo='cd /mnt/storage/Moments'
 # Ajedrez
 alias ajedrez='cd /home/havel/Games/Ajedrez/logs_games && xboard -fcp gnuchess -size 400x400'
 
+# Montar
+alias mont='/home/havel/.scripts/./montar_kalibackup.sh'
+
 # Pantalla · CREAR UN SCRIPT QUE ME PERMITA DE MANERA INTERACTIVA SUBIR Y BAJAR EL BRILLO + EL FLITRO NARANJA · CREAR UN SCRIPT QUE ME PERMITA DE MANERA INTERACTIVA SUBIR Y BAJAR EL BRILLO + EL FLITRO NARAN
 alias fpdi='redshift -O 3600'
 alias fpta='redshift -O 3200'
