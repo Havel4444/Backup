@@ -23,6 +23,7 @@ directories=(
     ".scripts"
     "i3"
     "bandit"
+    "documentacion_drivers_20250725_120102"
 )
 paths_of_directories=(
     "/home/havel/Documentos/cofre"
@@ -30,6 +31,7 @@ paths_of_directories=(
     "/home/havel/data"
     "/home/havel"
     "/home/havel/.config"
+    "/home/havel"
     "/home/havel"
 
 )

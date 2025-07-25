@@ -1,0 +1,125 @@
+Module                  Size  Used by
+hid_vivaldi            12288  0
+hid_vivaldi_common     12288  1 hid_vivaldi
+uhid                   20480  1
+uinput                 20480  4
+snd_seq_dummy          12288  0
+snd_hrtimer            12288  1
+snd_seq               110592  7 snd_seq_dummy
+snd_seq_device         16384  1 snd_seq
+nvidia_uvm           4915200  2
+rfcomm                102400  23
+cmac                   12288  3
+algif_hash             12288  1
+algif_skcipher         12288  1
+af_alg                 36864  6 algif_hash,algif_skcipher
+bnep                   36864  2
+nvidia_drm            118784  7
+drm_ttm_helper         16384  1 nvidia_drm
+ttm                   106496  1 drm_ttm_helper
+drm_kms_helper        253952  2 drm_ttm_helper,nvidia_drm
+nvidia_modeset       1605632  12 nvidia_drm
+sunrpc                872448  1
+binfmt_misc            28672  1
+nls_ascii              12288  1
+nls_cp437              16384  1
+vfat                   24576  1
+fat                   102400  1 vfat
+amd_atl                57344  1
+nvidia              60702720  257 nvidia_uvm,nvidia_modeset
+intel_rapl_msr         20480  0
+intel_rapl_common      53248  1 intel_rapl_msr
+exfat                 106496  1
+snd_hda_codec_realtek   217088  1
+snd_hda_codec_generic   114688  1 snd_hda_codec_realtek
+snd_hda_codec_hdmi     98304  1
+snd_hda_scodec_component    20480  1 snd_hda_codec_realtek
+snd_hda_intel          61440  2
+btusb                  81920  0
+edac_mce_amd           28672  0
+snd_intel_dspcfg       40960  1 snd_hda_intel
+btrtl                  32768  1 btusb
+snd_intel_sdw_acpi     16384  1 snd_intel_dspcfg
+kvm_amd               217088  0
+btintel                69632  1 btusb
+snd_hda_codec         217088  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
+btbcm                  24576  1 btusb
+btmtk                  32768  1 btusb
+snd_hda_core          143360  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
+bluetooth            1081344  54 btrtl,btmtk,btintel,btbcm,bnep,btusb,rfcomm
+kvm                  1396736  1 kvm_amd
+snd_hwdep              20480  1 snd_hda_codec
+snd_pcm               188416  4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
+eeepc_wmi              12288  0
+asus_wmi               98304  1 eeepc_wmi
+snd_timer              53248  3 snd_seq,snd_hrtimer,snd_pcm
+sparse_keymap          12288  1 asus_wmi
+platform_profile       12288  1 asus_wmi
+joydev                 24576  0
+snd                   151552  16 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_pcm
+battery                28672  1 asus_wmi
+ccp                   163840  1 kvm_amd
+sg                     45056  0
+soundcore              16384  1 snd
+ee1004                 16384  0
+irqbypass              12288  1 kvm
+k10temp                12288  0
+rfkill                 40960  5 asus_wmi,bluetooth
+video                  81920  2 asus_wmi,nvidia_modeset
+pcspkr                 12288  0
+evdev                  28672  23
+rapl                   20480  0
+wmi_bmof               12288  0
+drm                   774144  13 drm_kms_helper,nvidia,drm_ttm_helper,nvidia_drm,ttm
+msr                    12288  0
+efi_pstore             12288  0
+configfs               69632  1
+nfnetlink              20480  1
+efivarfs               28672  1
+ip_tables              28672  0
+x_tables               53248  1 ip_tables
+autofs4                57344  2
+ext4                 1142784  1
+crc16                  12288  2 bluetooth,ext4
+mbcache                16384  1 ext4
+jbd2                  200704  1 ext4
+crc32c_generic         12288  0
+hid_generic            12288  0
+usbhid                 77824  0
+hid                   262144  5 usbhid,hid_vivaldi_common,hid_vivaldi,hid_generic,uhid
+sd_mod                 81920  3
+xhci_pci               24576  0
+xhci_hcd              364544  1 xhci_pci
+ahci                   49152  3
+crct10dif_pclmul       12288  1
+crc32_pclmul           12288  0
+libahci                61440  1 ahci
+crc32c_intel           16384  2
+ghash_clmulni_intel    16384  0
+libata                462848  2 libahci,ahci
+r8169                 126976  0
+sha512_ssse3           53248  0
+nvme                   57344  1
+usbcore               409600  5 xhci_hcd,usbhid,btmtk,btusb,xhci_pci
+sha256_ssse3           32768  0
+realtek                45056  1
+sp5100_tco             20480  0
+scsi_mod              327680  3 sd_mod,libata,sg
+nvme_core             225280  2 nvme
+sha1_ssse3             32768  0
+watchdog               49152  1 sp5100_tco
+mdio_devres            12288  1 r8169
+aesni_intel           122880  4
+libphy                233472  3 r8169,mdio_devres,realtek
+gf128mul               16384  1 aesni_intel
+crypto_simd            16384  1 aesni_intel
+cryptd                 28672  3 crypto_simd,ghash_clmulni_intel
+i2c_piix4              28672  0
+i2c_smbus              16384  1 i2c_piix4
+usb_common             16384  2 xhci_hcd,usbcore
+nvme_auth              24576  1 nvme_core
+scsi_common            16384  4 scsi_mod,sd_mod,libata,sg
+wmi                    28672  3 video,asus_wmi,wmi_bmof
+gpio_amdpt             16384  0
+gpio_generic           20480  1 gpio_amdpt
+button                 24576  0
